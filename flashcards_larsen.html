@@ -8,16 +8,26 @@
 <meta name="apple-mobile-web-app-title" content="Anglais Larsen">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <style>
-:root{--bg:#0d0810;--bg2:#1a1018;--bg3:#241820;--bg4:#301a28;--txt:#f0eeea;--txt2:#9080a0;--txt3:#503050;--red:#c8102e;--gold:#d4a843;--gold2:#f0c060;--green:#2ea84a;--blue:#1a4fa0;--rose:#d43050;--navy:#012169}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+:root{
+  --bg:#fdf0f3;--bg2:#f8e4ea;--bg3:#f0d0da;--bg4:#e0b8c8;
+  --txt:#2a1820;--txt2:#7a4860;--txt3:#b08098;
+  --red:#c8102e;--gold:#d4a843;--gold2:#f0c060;
+  --green:#2ea84a;--navy:#012169;--rose:#e8a0b0;--rose2:#f0c8d4;
+}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:'Courier New',Courier,monospace;background:var(--bg);color:var(--txt);min-height:100vh;overflow-x:hidden;user-select:none}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;overflow-x:hidden;user-select:none}
 
-/* ROSE MOSAIC BACKGROUND */
-body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%231a0810'/%3E%3Ccircle cx='30' cy='30' r='10' fill='%238a1530' opacity='0.5'/%3E%3Ccircle cx='30' cy='22' r='7' fill='%23a02040' opacity='0.6'/%3E%3Ccircle cx='38' cy='36' r='7' fill='%23a02040' opacity='0.6'/%3E%3Ccircle cx='22' cy='36' r='7' fill='%23a02040' opacity='0.6'/%3E%3Ccircle cx='30' cy='30' r='5' fill='%23c03050' opacity='0.5'/%3E%3Ccircle cx='30' cy='27' r='3' fill='%23e04070' opacity='0.4'/%3E%3Cellipse cx='20' cy='22' rx='5' ry='3' fill='%231a5020' opacity='0.45' transform='rotate(-35 20 22)'/%3E%3Cellipse cx='40' cy='22' rx='5' ry='3' fill='%231a5020' opacity='0.45' transform='rotate(35 40 22)'/%3E%3Cellipse cx='20' cy='42' rx='5' ry='3' fill='%231a5020' opacity='0.45' transform='rotate(35 20 42)'/%3E%3Cellipse cx='40' cy='42' rx='5' ry='3' fill='%231a5020' opacity='0.45' transform='rotate(-35 40 42)'/%3E%3Crect width='60' height='60' fill='none' stroke='%232a0818' stroke-width='0.8'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.8}
-body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(13,8,16,.3) 0%,rgba(13,8,16,.7) 100%);pointer-events:none;z-index:0}
+/* PALE ROSE MOSAIC BACKGROUND */
+body::before{
+  content:'';position:fixed;top:0;left:0;right:0;bottom:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23fdf0f3'/%3E%3Ccircle cx='40' cy='32' r='9' fill='%23e8a0b8' opacity='0.22'/%3E%3Ccircle cx='49' cy='40' r='9' fill='%23e8a0b8' opacity='0.22'/%3E%3Ccircle cx='40' cy='48' r='9' fill='%23e8a0b8' opacity='0.22'/%3E%3Ccircle cx='31' cy='40' r='9' fill='%23e8a0b8' opacity='0.22'/%3E%3Ccircle cx='40' cy='35' r='6' fill='%23f0b8cc' opacity='0.28'/%3E%3Ccircle cx='46' cy='40' r='6' fill='%23f0b8cc' opacity='0.28'/%3E%3Ccircle cx='40' cy='45' r='6' fill='%23f0b8cc' opacity='0.28'/%3E%3Ccircle cx='34' cy='40' r='6' fill='%23f0b8cc' opacity='0.28'/%3E%3Ccircle cx='40' cy='40' r='5' fill='%23f8d0de' opacity='0.32'/%3E%3Ccircle cx='40' cy='40' r='2.5' fill='%23d4a843' opacity='0.30'/%3E%3Cellipse cx='26' cy='28' rx='6' ry='3' fill='%23609060' opacity='0.16' transform='rotate(-40 26 28)'/%3E%3Cellipse cx='54' cy='28' rx='6' ry='3' fill='%23609060' opacity='0.16' transform='rotate(40 54 28)'/%3E%3Cellipse cx='26' cy='52' rx='6' ry='3' fill='%23609060' opacity='0.16' transform='rotate(40 26 52)'/%3E%3Cellipse cx='54' cy='52' rx='6' ry='3' fill='%23609060' opacity='0.16' transform='rotate(-40 54 52)'/%3E%3Crect width='80' height='80' fill='none' stroke='%23e8c8d4' stroke-width='0.7'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(253,240,243,.15) 0%,rgba(248,228,234,.25) 100%);pointer-events:none;z-index:0}
 
-.nav-bar{display:flex;background:rgba(20,10,24,.95);border-bottom:2px solid #4a0828;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
-.nav-btn{flex:1;padding:14px 4px 10px;text-align:center;cursor:pointer;border:none;background:none;color:var(--txt2);display:flex;flex-direction:column;align-items:center;gap:3px;transition:color .2s;font-family:'Courier New',Courier,monospace}
+.nav-bar{display:flex;background:rgba(248,228,234,.96);border-bottom:2px solid #d8a0b8;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.nav-btn{flex:1;padding:14px 4px 10px;text-align:center;cursor:pointer;border:none;background:none;color:var(--txt2);display:flex;flex-direction:column;align-items:center;gap:3px;transition:color .2s;font-family:'Inter',sans-serif}
 .nav-btn.active{color:var(--gold)}
 .nav-icon{font-size:18px}
 .nav-label{font-size:9px;letter-spacing:.08em;text-transform:uppercase}
@@ -25,92 +35,93 @@ body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:r
 .page{display:none;padding:14px 16px;min-height:calc(100vh - 57px);position:relative;z-index:1}
 .page.active{display:block}
 
-select,button{font-family:'Courier New',Courier,monospace}
+select,button{font-family:'Inter',sans-serif}
 .ctrl-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
-.ctrl-row select,.ctrl-row button{font-size:11px;padding:0 10px;height:34px;border:1px solid var(--bg4);border-radius:4px;background:rgba(20,10,24,.9);color:var(--txt);cursor:pointer}
+.ctrl-row select,.ctrl-row button{font-size:11px;padding:0 10px;height:34px;border:1px solid var(--bg4);border-radius:4px;background:rgba(255,245,248,.92);color:var(--txt);cursor:pointer}
 .save-row{display:flex;gap:6px;margin-bottom:10px;align-items:center;flex-wrap:wrap}
 .save-row span{font-size:10px;color:var(--txt3)}
-.btn-save{background:rgba(10,16,40,.9)!important;color:#4a9eff!important;border:1px solid #153060!important;font-size:11px;padding:0 10px;height:34px;border-radius:4px;cursor:pointer}
-.btn-load{background:rgba(20,10,30,.9)!important;color:#9b6eff!important;border:1px solid #301060!important;font-size:11px;padding:0 10px;height:34px;border-radius:4px;cursor:pointer}
+.btn-save{background:rgba(220,228,255,.9)!important;color:#2040c0!important;border:1px solid #8090d0!important;font-size:11px;padding:0 10px;height:34px;border-radius:4px;cursor:pointer}
+.btn-load{background:rgba(235,220,255,.9)!important;color:#6020b0!important;border:1px solid #a070d0!important;font-size:11px;padding:0 10px;height:34px;border-radius:4px;cursor:pointer}
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
-.stat-box{background:rgba(20,10,24,.9);border-radius:4px;padding:8px 4px;text-align:center;border:1px solid var(--bg4)}
+.stat-box{background:rgba(255,245,248,.92);border-radius:4px;padding:8px 4px;text-align:center;border:1px solid var(--bg4)}
 .stat-n{font-size:20px;font-weight:700}
 .stat-l{font-size:9px;color:var(--txt2);text-transform:uppercase;letter-spacing:.05em}
-.ok-c{color:var(--green)}
-.ko-c{color:var(--red)}
+.ok-c{color:var(--green)}.ko-c{color:var(--red)}
 .pbar{height:2px;background:var(--bg3);margin-bottom:10px}
 .pfill{height:100%;background:var(--red);transition:width .3s}
 .flt-row{display:flex;gap:6px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
 .flt-row label{font-size:10px;color:var(--txt2);text-transform:uppercase;letter-spacing:.05em}
-.flt-row select{font-size:11px;padding:0 10px;height:32px;border:1px solid var(--bg4);border-radius:4px;background:rgba(20,10,24,.9);color:var(--txt);cursor:pointer}
+.flt-row select{font-size:11px;padding:0 10px;height:32px;border:1px solid var(--bg4);border-radius:4px;background:rgba(255,245,248,.92);color:var(--txt);cursor:pointer}
 
-.flashcard{background:rgba(20,10,24,.92);border:1px solid var(--bg4);border-radius:8px;padding:20px 16px;cursor:pointer;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;transition:border-color .15s,transform .1s;backdrop-filter:blur(4px)}
+.flashcard{background:rgba(255,245,248,.95);border:1px solid var(--bg4);border-radius:8px;padding:20px 16px;cursor:pointer;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;transition:border-color .15s,transform .1s}
 .flashcard:active{transform:scale(.98)}
-.flashcard:hover{border-color:#6a2040}
+.flashcard:hover{border-color:#d08098}
 .fc-fiche{font-size:9px;color:var(--red);margin-bottom:2px;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
-.fc-th{font-size:9px;color:var(--txt3);margin-bottom:12px;letter-spacing:.05em}
-.fc-w{font-size:22px;font-weight:700;text-align:center;line-height:1.3;color:var(--txt)}
+.fc-th{font-size:9px;color:var(--txt3);margin-bottom:12px}
+.fc-w{font-size:22px;font-weight:700;text-align:center;line-height:1.3}
 .fc-hint{font-size:10px;color:var(--txt3);margin-top:14px;letter-spacing:.1em}
 .fc-sep{width:100%;border-top:1px solid var(--bg4);margin-top:14px;padding-top:12px}
-.fc-fr{font-size:18px;color:#c8c0d8;margin-bottom:8px;text-align:center}
+.fc-fr{font-size:18px;color:#d8d0e0;margin-bottom:8px;text-align:center}
 .fc-ex{font-size:12px;color:var(--txt3);font-style:italic;text-align:center}
 .card-nav{display:flex;gap:6px;justify-content:center;align-items:center;margin-bottom:10px}
 .card-nav-i{font-size:11px;color:var(--txt2);min-width:80px;text-align:center}
-.card-nav button{font-size:12px;padding:0 16px;height:34px;border:1px solid var(--bg4);border-radius:4px;background:rgba(20,10,24,.9);color:var(--txt);cursor:pointer}
+.card-nav button{font-size:12px;padding:0 16px;height:34px;border:1px solid var(--bg4);border-radius:4px;background:rgba(255,245,248,.92);color:var(--txt);cursor:pointer}
 .vote-row{display:flex;gap:8px;justify-content:center;margin-bottom:8px}
-.vote-row button{flex:1;max-width:170px;font-size:12px;height:44px;border-radius:4px;cursor:pointer;font-weight:700;border:1px solid;letter-spacing:.05em;font-family:'Courier New',Courier,monospace}
-.btn-ok{background:rgba(10,32,20,.9)!important;color:var(--green)!important;border-color:#154028!important}
-.btn-ko{background:rgba(32,10,10,.9)!important;color:var(--red)!important;border-color:#401515!important}
+.vote-row button{flex:1;max-width:170px;font-size:12px;height:44px;border-radius:4px;cursor:pointer;font-weight:700;border:1px solid;font-family:'Inter',sans-serif}
+.btn-ok{background:rgba(220,248,230,.9)!important;color:var(--green)!important;border-color:#154028!important}
+.btn-ko{background:rgba(255,220,220,.9)!important;color:var(--red)!important;border-color:#401515!important}
 
-/* DÉFI */
+/* DEFI */
 .defi-title{font-size:11px;color:var(--gold);text-align:center;margin-bottom:4px;letter-spacing:.2em;text-transform:uppercase}
-.streak-display{font-size:52px;font-weight:700;color:var(--gold2);text-align:center;margin:4px 0;text-shadow:0 0 24px rgba(212,168,67,.5)}
+.streak-display{font-size:52px;font-weight:700;color:var(--gold2);text-align:center;margin:4px 0;text-shadow:0 0 12px rgba(180,120,30,.3)}
 .streak-label{font-size:9px;color:var(--txt2);text-transform:uppercase;letter-spacing:.1em;text-align:center;margin-bottom:2px}
-.record-display{font-size:12px;color:var(--txt2);text-align:center;margin-bottom:10px}
+.record-display{font-size:12px;color:var(--txt2);text-align:center;margin-bottom:8px}
 .record-display span{color:var(--gold)}
 
-.guard-wrap{display:flex;justify-content:space-between;align-items:flex-end;margin:0 -16px;padding:0 2px;height:220px;overflow:hidden}
-.guard-svg{width:90px;height:200px;flex-shrink:0;transition:transform .3s;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5))}
-.guard-svg.happy{animation:gHappy .6s ease}
-.guard-svg.sad{animation:gSad .5s ease}
-@keyframes gHappy{0%{transform:translateY(0)}20%{transform:translateY(-16px) rotate(-5deg)}40%{transform:translateY(-10px) rotate(5deg)}60%{transform:translateY(-14px) rotate(-3deg)}100%{transform:translateY(0)}}
-@keyframes gSad{0%,100%{transform:rotate(0)}20%{transform:rotate(-8deg) translateY(4px)}40%{transform:rotate(8deg) translateY(4px)}60%{transform:rotate(-4deg)}}
+/* Pixel guards arena */
+.guard-arena{display:flex;justify-content:space-between;align-items:flex-end;margin:0 -16px;padding:0;height:210px;position:relative;z-index:1;overflow:hidden}
+.guard-side{width:110px;height:210px;display:flex;align-items:flex-end;justify-content:center;flex-shrink:0}
+.guard-canvas{image-rendering:pixelated;image-rendering:crisp-edges}
 
-.combo-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:12px;gap:4px}
+@keyframes guardHappy{0%{transform:translateY(0)}20%{transform:translateY(-16px) rotate(-7deg)}45%{transform:translateY(-10px) rotate(7deg)}70%{transform:translateY(-14px) rotate(-3deg)}100%{transform:translateY(0)}}
+@keyframes guardSad{0%,100%{transform:rotate(0)}20%{transform:rotate(-10deg) translateY(4px)}40%{transform:rotate(10deg) translateY(4px)}65%{transform:rotate(-5deg)}}
+.guard-canvas.happy{animation:guardHappy .6s ease}
+.guard-canvas.sad{animation:guardSad .5s ease}
+
+.arena-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:10px}
 .combo-badge{font-size:28px;min-height:36px;text-align:center}
 
-.defi-card{background:rgba(20,10,24,.92);border:1px solid var(--bg4);border-radius:8px;padding:16px 14px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 0 10px;transition:border-color .3s;backdrop-filter:blur(4px)}
-.defi-card.correct{border-color:var(--green)!important;background:rgba(10,32,20,.9)}
-.defi-card.wrong{border-color:var(--red)!important;background:rgba(32,10,10,.9)}
+.defi-card{background:rgba(255,245,248,.95);border:1px solid var(--bg4);border-radius:8px;padding:16px 14px;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 0 10px;transition:border-color .3s}
+.defi-card.correct{border-color:var(--green)!important;background:rgba(220,248,230,.9)}
+.defi-card.wrong{border-color:var(--red)!important;background:rgba(255,220,220,.9)}
 .defi-q-fiche{font-size:9px;color:var(--red);text-transform:uppercase;letter-spacing:.15em;font-weight:700;margin-bottom:2px}
 .defi-q-theme{font-size:9px;color:var(--txt3);margin-bottom:10px}
 .defi-q-text{font-size:20px;font-weight:700;text-align:center;line-height:1.3}
 .defi-reveal{font-size:12px;color:var(--gold);margin-top:10px;text-align:center;font-style:italic}
 
 .defi-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.choice-btn{padding:10px 8px;border-radius:4px;font-size:11px;cursor:pointer;border:1px solid var(--bg4);background:rgba(20,10,24,.9);color:var(--txt);text-align:center;line-height:1.4;min-height:50px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:'Courier New',Courier,monospace}
+.choice-btn{padding:10px 8px;border-radius:4px;font-size:11px;cursor:pointer;border:1px solid var(--bg4);background:rgba(255,245,248,.92);color:var(--txt);text-align:center;line-height:1.4;min-height:50px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:'Inter',sans-serif}
 .choice-btn:active{transform:scale(.97)}
-.choice-btn.reveal-correct{background:rgba(10,32,20,.9);border-color:var(--green);color:var(--green)}
-.choice-btn.wrong-choice{background:rgba(32,10,10,.9);border-color:var(--red);color:var(--red)}
+.choice-btn.reveal-correct{background:rgba(220,248,230,.9);border-color:var(--green);color:var(--green)}
+.choice-btn.wrong-choice{background:rgba(255,220,220,.9);border-color:var(--red);color:var(--red)}
 
-.defi-ctrl-btn{width:100%;padding:14px;border-radius:4px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid;margin-bottom:8px;transition:transform .1s;font-family:'Courier New',Courier,monospace;letter-spacing:.08em;text-transform:uppercase}
+.defi-ctrl-btn{width:100%;padding:14px;border-radius:4px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid;margin-bottom:8px;transition:transform .1s;font-family:'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase}
 .defi-ctrl-btn:active{transform:scale(.98)}
-.btn-start{background:var(--gold);color:#0d0810;border-color:var(--gold2)}
-.btn-next{background:var(--navy);color:#fff;border-color:#2040c0}
-.btn-restart{background:#400a0a;color:var(--red);border-color:var(--red)}
+.btn-start{background:var(--gold);color:#1a0c12;border-color:var(--gold2)}
+.btn-next{background:#012169;color:#fff;border-color:#012169}
+.btn-restart{background:#ffe8e8;color:#c8102e;border-color:#c8102e}
 
-/* RÉVISION */
-.rev-search{width:100%;padding:10px 14px;border-radius:4px;font-size:12px;border:1px solid var(--bg4);background:rgba(20,10,24,.9);color:var(--txt);margin-bottom:10px;font-family:'Courier New',Courier,monospace}
+/* REVISION */
+.rev-search{width:100%;padding:10px 14px;border-radius:4px;font-size:12px;border:1px solid var(--bg4);background:rgba(255,245,248,.92);color:var(--txt);margin-bottom:10px;font-family:'Inter',sans-serif}
 .rev-mode-row{display:flex;gap:6px;margin-bottom:10px}
-.rev-mode-btn{flex:1;padding:8px;border-radius:4px;font-size:11px;cursor:pointer;border:1px solid var(--bg4);background:rgba(20,10,24,.9);color:var(--txt2);transition:all .2s;font-family:'Courier New',Courier,monospace;text-transform:uppercase;letter-spacing:.05em}
-.rev-mode-btn.active{background:var(--bg4);color:var(--txt);border-color:#6a2040}
+.rev-mode-btn{flex:1;padding:8px;border-radius:4px;font-size:11px;cursor:pointer;border:1px solid var(--bg4);background:rgba(255,245,248,.92);color:var(--txt2);transition:all .2s;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+.rev-mode-btn.active{background:var(--bg3);color:var(--txt);border-color:#c898b0}
 .rev-filters{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;overflow-x:auto}
-.rev-filter-btn{padding:6px 12px;border-radius:20px;font-size:10px;cursor:pointer;border:1px solid var(--bg4);background:rgba(20,10,24,.9);color:var(--txt2);white-space:nowrap;text-transform:uppercase;letter-spacing:.05em;font-family:'Courier New',Courier,monospace}
-.rev-filter-btn.active{background:#6a1030;border-color:var(--red);color:#fff}
+.rev-filter-btn{padding:6px 12px;border-radius:20px;font-size:10px;cursor:pointer;border:1px solid var(--bg4);background:rgba(255,245,248,.92);color:var(--txt2);white-space:nowrap;text-transform:uppercase;letter-spacing:.05em;font-family:'Inter',sans-serif}
+.rev-filter-btn.active{background:#c8102e;border-color:#c8102e;color:#fff}
 .rev-count{font-size:10px;color:var(--txt3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
-.rev-list{}
-.rev-item{background:rgba(20,10,24,.9);border:1px solid var(--bg4);border-radius:6px;margin-bottom:6px;overflow:hidden;cursor:pointer;transition:border-color .2s;backdrop-filter:blur(4px)}
-.rev-item:hover{border-color:#6a2040}
+.rev-item{background:rgba(255,245,248,.92);border:1px solid var(--bg4);border-radius:6px;margin-bottom:6px;overflow:hidden;cursor:pointer;transition:border-color .2s}
+.rev-item:hover{border-color:#d08098}
 .rev-item-header{padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
 .rev-item-left{flex:1;min-width:0}
 .rev-item-fiche{font-size:9px;color:var(--red);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:2px}
@@ -121,10 +132,10 @@ select,button{font-family:'Courier New',Courier,monospace}
 .rev-item.open .rev-item-arrow{transform:rotate(90deg)}
 .rev-item-body{padding:0 14px 12px;display:none;border-top:1px solid var(--bg3)}
 .rev-item.open .rev-item-body{display:block;padding-top:10px}
-.rev-example{font-size:12px;color:#908898;font-style:italic;line-height:1.6}
+.rev-example{font-size:12px;color:#9080a0;font-style:italic;line-height:1.6}
 .rev-example span{color:var(--gold);font-style:normal}
 
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--txt);color:var(--bg);font-size:12px;padding:8px 18px;border-radius:4px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999;white-space:nowrap;font-family:'Courier New',Courier,monospace}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--txt);color:var(--bg);font-size:12px;padding:8px 18px;border-radius:4px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999;white-space:nowrap;font-family:'Inter',sans-serif}
 .toast.show{opacity:1}
 </style>
 </head>
@@ -142,11 +153,10 @@ select,button{font-family:'Courier New',Courier,monospace}
   </button>
 </nav>
 
-<!-- PAGE 1 : FLASHCARDS -->
+<!-- PAGE 1 -->
 <div class="page active" id="p1">
   <div class="ctrl-row">
-    <select id="sd"></select>
-    <select id="st"></select>
+    <select id="sd"></select><select id="st"></select>
     <button onclick="p1shuffle()">Mélanger</button>
     <button onclick="p1reset()">Reset</button>
   </div>
@@ -207,356 +217,16 @@ select,button{font-family:'Courier New',Courier,monospace}
   <div class="streak-label">série en cours</div>
   <div class="record-display">Record : <span id="record-num">0</span></div>
 
-  <div class="guard-wrap">
-    <svg class="guard-svg" id="guard-left" viewBox="0 0 90 200" xmlns="http://www.w3.org/2000/svg" >
-  <!-- RIFLE -->
-  <line x1="12" y1="10" x2="12" y2="145" stroke="#4a3820" stroke-width="3"/>
-  <line x1="12" y1="10" x2="11" y2="10" stroke="#6a5830" stroke-width="3"/>
-  <polygon points="10,6 12,2 14,6 13,12 11,12" fill="#8a7840"/>
-  <rect x="10" y="100" width="4" height="3" fill="#6a5830" rx="1"/>
-  <line x1="12" y1="110" x2="19" y2="116" stroke="#4a3820" stroke-width="1.5"/>
-  <!-- Trigger guard -->
-  <path d="M11 108 Q14 113 17 108" stroke="#6a5830" stroke-width="1.2" fill="none"/>
-
-  <!-- BEARSKIN HAT - very tall, fluffy -->
-  <rect x="22" y="4" width="46" height="46" rx="5" fill="#0a0a0a"/>
-  <!-- Hat texture / fur effect -->
-  <rect x="22" y="4" width="46" height="46" rx="5" fill="url(#fur)" opacity="0.3"/>
-  <!-- Hat sheen -->
-  <rect x="24" y="6" width="8" height="40" rx="3" fill="#1a1a1a" opacity="0.5"/>
-  <!-- Hat brim -->
-  <rect x="18" y="48" width="54" height="7" rx="2" fill="#111"/>
-  <rect x="19" y="49" width="52" height="5" rx="1" fill="#1a1a1a"/>
-  <!-- Chin strap -->
-  <path d="M24 55 Q45 65 66 55" stroke="#d4a843" stroke-width="2" fill="none"/>
-  <path d="M24 55 Q45 66 66 55" stroke="#b08020" stroke-width="1" fill="none" opacity="0.5"/>
-  <!-- BADGE on hat - Royal cypher -->
-  <ellipse cx="45" cy="22" rx="9" ry="11" fill="#c8102e"/>
-  <ellipse cx="45" cy="22" rx="7" ry="9" fill="#c8102e" stroke="#d4a843" stroke-width="1.5"/>
-  <ellipse cx="45" cy="22" rx="4" ry="5" fill="#d4a843"/>
-  <text x="45" y="26" text-anchor="middle" font-size="5" fill="#c8102e" font-family="serif" font-weight="bold">ER</text>
-  <!-- Hat top plume hint -->
-  <ellipse cx="45" cy="5" rx="10" ry="3" fill="#0f0f0f"/>
-
-  <!-- FACE -->
-  <ellipse cx="45" cy="75" rx="14" ry="16" fill="#d4b896"/>
-  <!-- Face shading -->
-  <ellipse cx="42" cy="73" rx="4" ry="6" fill="#c8a880" opacity="0.4"/>
-  <ellipse cx="50" cy="80" rx="3" ry="4" fill="#c8a880" opacity="0.3"/>
-  <!-- Ear left -->
-  <ellipse cx="31" cy="74" rx="3" ry="5" fill="#c8a880"/>
-  <ellipse cx="31" cy="74" rx="1.5" ry="3" fill="#b8947a"/>
-  <!-- Ear right -->
-  <ellipse cx="59" cy="74" rx="3" ry="5" fill="#c8a880"/>
-  <ellipse cx="59" cy="74" rx="1.5" ry="3" fill="#b8947a"/>
-  <!-- Eyebrows -->
-  <path d="M37 67 Q41 65 44 66" stroke="#5a3a20" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <path d="M46 66 Q49 65 53 67" stroke="#5a3a20" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <!-- Eyes -->
-  <ellipse cx="40" cy="70" rx="3" ry="3.5" fill="white"/>
-  <ellipse cx="50" cy="70" rx="3" ry="3.5" fill="white"/>
-  <ellipse cx="40" cy="70" rx="2" ry="2.5" fill="#2a1a0a"/>
-  <ellipse cx="50" cy="70" rx="2" ry="2.5" fill="#2a1a0a"/>
-  <ellipse cx="41" cy="69" rx="0.7" ry="0.7" fill="white"/>
-  <ellipse cx="51" cy="69" rx="0.7" ry="0.7" fill="white"/>
-  <!-- Eyelids -->
-  <path d="M37 69 Q40 67 43 69" stroke="#b89070" stroke-width="1" fill="none"/>
-  <path d="M47 69 Q50 67 53 69" stroke="#b89070" stroke-width="1" fill="none"/>
-  <!-- Nose -->
-  <ellipse cx="45" cy="76" rx="2.5" ry="2" fill="#c0987c"/>
-  <circle cx="43" cy="77" r="1.2" fill="#b08868"/>
-  <circle cx="47" cy="77" r="1.2" fill="#b08868"/>
-  <!-- Mouth -->
-  <path id="mouth-l" d="M39 82 Q45 86 51 82" stroke="#8a5040" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <!-- Chin dimple -->
-  <ellipse cx="45" cy="87" rx="2" ry="1.5" fill="#c0987c" opacity="0.5"/>
-
-  <!-- COLLAR gold -->
-  <rect x="34" y="90" width="22" height="7" rx="2" fill="#d4a843"/>
-  <rect x="36" y="91" width="18" height="5" rx="1" fill="#e8c050"/>
-  <line x1="45" y1="91" x2="45" y2="96" stroke="#b08020" stroke-width="1"/>
-
-  <!-- RED TUNIC (detailed) -->
-  <!-- Main body -->
-  <rect x="26" y="96" width="38" height="50" rx="4" fill="#b01020"/>
-  <!-- Tunic shading -->
-  <rect x="26" y="96" width="10" height="50" rx="4" fill="#900010" opacity="0.5"/>
-  <rect x="54" y="96" width="10" height="50" rx="4" fill="#900010" opacity="0.5"/>
-  <!-- Center seam -->
-  <line x1="45" y1="97" x2="45" y2="144" stroke="#800010" stroke-width="1"/>
-  <!-- Gold buttons row -->
-  <circle cx="45" cy="103" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="112" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="121" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="130" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="139" r="2.5" fill="#d4a843"/>
-  <!-- Button highlight -->
-  <circle cx="44" cy="102" r="1" fill="#f0c060" opacity="0.7"/>
-  <circle cx="44" cy="111" r="1" fill="#f0c060" opacity="0.7"/>
-  <!-- Shoulder epaulettes -->
-  <rect x="22" y="96" width="10" height="6" rx="2" fill="#d4a843"/>
-  <rect x="58" y="96" width="10" height="6" rx="2" fill="#d4a843"/>
-  <!-- Epaulette fringe -->
-  <line x1="22" y1="102" x2="22" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="24" y1="102" x2="24" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="26" y1="102" x2="26" y2="110" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="28" y1="102" x2="28" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="30" y1="102" x2="30" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="60" y1="102" x2="60" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="62" y1="102" x2="62" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="64" y1="102" x2="64" y2="110" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="66" y1="102" x2="66" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="68" y1="102" x2="68" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <!-- Cross belt -->
-  <line x1="26" y1="97" x2="58" y2="143" stroke="#d4a843" stroke-width="2.5"/>
-  <ellipse cx="42" cy="120" rx="4" ry="4" fill="#c8102e" stroke="#d4a843" stroke-width="1.5"/>
-  <ellipse cx="42" cy="120" rx="2" ry="2" fill="#d4a843"/>
-  <!-- Belt at waist -->
-  <rect x="26" y="140" width="38" height="6" rx="1" fill="#111"/>
-  <rect x="40" y="140" width="10" height="6" fill="#d4a843"/>
-  <rect x="43" y="141" width="4" height="4" fill="#b08020"/>
-
-  <!-- ARMS (red sleeves) -->
-  <!-- Left arm -->
-  <rect x="14" y="98" width="13" height="35" rx="5" fill="#b01020"/>
-  <!-- Cuff left -->
-  <rect x="13" y="128" width="14" height="7" rx="3" fill="#d4a843"/>
-  <!-- Left hand -->
-  <ellipse cx="20" cy="140" rx="5" ry="4" fill="#d4b896"/>
-  <line x1="17" y1="143" x2="16" y2="146" stroke="#c4a886" stroke-width="1.5"/>
-  <line x1="20" y1="144" x2="19" y2="147" stroke="#c4a886" stroke-width="1.5"/>
-  <line x1="23" y1="143" x2="22" y2="146" stroke="#c4a886" stroke-width="1.5"/>
-
-  <!-- Right arm -->
-  <rect x="63" y="98" width="13" height="35" rx="5" fill="#b01020"/>
-  <!-- Cuff right -->
-  <rect x="63" y="128" width="14" height="7" rx="3" fill="#d4a843"/>
-  <!-- Right hand - THUMB UP position (default) -->
-  <ellipse cx="70" cy="140" rx="5" ry="4" fill="#d4b896"/>
-  <!-- Thumb up elements (hidden/shown by JS) -->
-  <g id="guard-left-thumbup">
-    <rect x="68" y="130" width="5" height="11" rx="2.5" fill="#d4b896"/>
-    <ellipse cx="70.5" cy="130" rx="2.5" ry="2.5" fill="#d4b896"/>
-    <!-- Thumb nail -->
-    <ellipse cx="70.5" cy="129" rx="1.5" ry="1" fill="#e8c8a8"/>
-  </g>
-  <!-- Hands on head elements (hidden by default) -->
-  <g id="guard-left-handsup" display="none">
-    <line x1="20" y1="138" x2="30" y2="68" stroke="#b01020" stroke-width="10" stroke-linecap="round"/>
-    <line x1="70" y1="138" x2="60" y2="68" stroke="#b01020" stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="30" cy="66" rx="6" ry="5" fill="#d4b896"/>
-    <ellipse cx="60" cy="66" rx="6" ry="5" fill="#d4b896"/>
-  </g>
-
-  <!-- BLACK TROUSERS -->
-  <!-- Left leg -->
-  <rect x="28" y="145" width="14" height="42" rx="3" fill="#111"/>
-  <!-- Right leg -->
-  <rect x="48" y="145" width="14" height="42" rx="3" fill="#111"/>
-  <!-- Red stripe down each leg -->
-  <line x1="35" y1="145" x2="35" y2="186" stroke="#c8102e" stroke-width="2"/>
-  <line x1="55" y1="145" x2="55" y2="186" stroke="#c8102e" stroke-width="2"/>
-  <!-- Trouser crease -->
-  <line x1="35" y1="145" x2="35" y2="186" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
-  <line x1="55" y1="145" x2="55" y2="186" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
-
-  <!-- BLACK SHOES (polished) -->
-  <!-- Left shoe -->
-  <ellipse cx="32" cy="190" rx="10" ry="5" fill="#0a0a0a"/>
-  <ellipse cx="30" cy="189" rx="5" ry="3" fill="#1a1a1a"/>
-  <ellipse cx="28" cy="189" rx="3" ry="2" fill="#222" opacity="0.5"/>
-  <!-- Right shoe -->
-  <ellipse cx="58" cy="190" rx="10" ry="5" fill="#0a0a0a"/>
-  <ellipse cx="56" cy="189" rx="5" ry="3" fill="#1a1a1a"/>
-  <ellipse cx="54" cy="189" rx="3" ry="2" fill="#222" opacity="0.5"/>
-
-  <!-- Shoe shine highlight -->
-  <ellipse cx="28" cy="188" rx="3" ry="1.5" fill="white" opacity="0.15"/>
-  <ellipse cx="54" cy="188" rx="3" ry="1.5" fill="white" opacity="0.15"/>
-
-  <defs>
-    <pattern id="fur" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="0.8" fill="#2a2a2a"/>
-      <circle cx="3" cy="3" r="0.8" fill="#1a1a1a"/>
-    </pattern>
-  </defs>
-</svg>
-    <div class="combo-mid">
-      <div class="combo-badge" id="defi-combo-badge"></div>
+  <div class="guard-arena">
+    <div class="guard-side">
+      <canvas id="guard-left" class="guard-canvas" width="100" height="200" style="width:100px;height:200px"></canvas>
     </div>
-    <svg class="guard-svg" id="guard-right" viewBox="0 0 90 200" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)">
-  <!-- RIFLE -->
-  <line x1="12" y1="10" x2="12" y2="145" stroke="#4a3820" stroke-width="3"/>
-  <line x1="12" y1="10" x2="11" y2="10" stroke="#6a5830" stroke-width="3"/>
-  <polygon points="10,6 12,2 14,6 13,12 11,12" fill="#8a7840"/>
-  <rect x="10" y="100" width="4" height="3" fill="#6a5830" rx="1"/>
-  <line x1="12" y1="110" x2="19" y2="116" stroke="#4a3820" stroke-width="1.5"/>
-  <!-- Trigger guard -->
-  <path d="M11 108 Q14 113 17 108" stroke="#6a5830" stroke-width="1.2" fill="none"/>
-
-  <!-- BEARSKIN HAT - very tall, fluffy -->
-  <rect x="22" y="4" width="46" height="46" rx="5" fill="#0a0a0a"/>
-  <!-- Hat texture / fur effect -->
-  <rect x="22" y="4" width="46" height="46" rx="5" fill="url(#fur)" opacity="0.3"/>
-  <!-- Hat sheen -->
-  <rect x="24" y="6" width="8" height="40" rx="3" fill="#1a1a1a" opacity="0.5"/>
-  <!-- Hat brim -->
-  <rect x="18" y="48" width="54" height="7" rx="2" fill="#111"/>
-  <rect x="19" y="49" width="52" height="5" rx="1" fill="#1a1a1a"/>
-  <!-- Chin strap -->
-  <path d="M24 55 Q45 65 66 55" stroke="#d4a843" stroke-width="2" fill="none"/>
-  <path d="M24 55 Q45 66 66 55" stroke="#b08020" stroke-width="1" fill="none" opacity="0.5"/>
-  <!-- BADGE on hat - Royal cypher -->
-  <ellipse cx="45" cy="22" rx="9" ry="11" fill="#c8102e"/>
-  <ellipse cx="45" cy="22" rx="7" ry="9" fill="#c8102e" stroke="#d4a843" stroke-width="1.5"/>
-  <ellipse cx="45" cy="22" rx="4" ry="5" fill="#d4a843"/>
-  <text x="45" y="26" text-anchor="middle" font-size="5" fill="#c8102e" font-family="serif" font-weight="bold">ER</text>
-  <!-- Hat top plume hint -->
-  <ellipse cx="45" cy="5" rx="10" ry="3" fill="#0f0f0f"/>
-
-  <!-- FACE -->
-  <ellipse cx="45" cy="75" rx="14" ry="16" fill="#d4b896"/>
-  <!-- Face shading -->
-  <ellipse cx="42" cy="73" rx="4" ry="6" fill="#c8a880" opacity="0.4"/>
-  <ellipse cx="50" cy="80" rx="3" ry="4" fill="#c8a880" opacity="0.3"/>
-  <!-- Ear left -->
-  <ellipse cx="31" cy="74" rx="3" ry="5" fill="#c8a880"/>
-  <ellipse cx="31" cy="74" rx="1.5" ry="3" fill="#b8947a"/>
-  <!-- Ear right -->
-  <ellipse cx="59" cy="74" rx="3" ry="5" fill="#c8a880"/>
-  <ellipse cx="59" cy="74" rx="1.5" ry="3" fill="#b8947a"/>
-  <!-- Eyebrows -->
-  <path d="M37 67 Q41 65 44 66" stroke="#5a3a20" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <path d="M46 66 Q49 65 53 67" stroke="#5a3a20" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <!-- Eyes -->
-  <ellipse cx="40" cy="70" rx="3" ry="3.5" fill="white"/>
-  <ellipse cx="50" cy="70" rx="3" ry="3.5" fill="white"/>
-  <ellipse cx="40" cy="70" rx="2" ry="2.5" fill="#2a1a0a"/>
-  <ellipse cx="50" cy="70" rx="2" ry="2.5" fill="#2a1a0a"/>
-  <ellipse cx="41" cy="69" rx="0.7" ry="0.7" fill="white"/>
-  <ellipse cx="51" cy="69" rx="0.7" ry="0.7" fill="white"/>
-  <!-- Eyelids -->
-  <path d="M37 69 Q40 67 43 69" stroke="#b89070" stroke-width="1" fill="none"/>
-  <path d="M47 69 Q50 67 53 69" stroke="#b89070" stroke-width="1" fill="none"/>
-  <!-- Nose -->
-  <ellipse cx="45" cy="76" rx="2.5" ry="2" fill="#c0987c"/>
-  <circle cx="43" cy="77" r="1.2" fill="#b08868"/>
-  <circle cx="47" cy="77" r="1.2" fill="#b08868"/>
-  <!-- Mouth -->
-  <path id="mouth-r" d="M39 82 Q45 86 51 82" stroke="#8a5040" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <!-- Chin dimple -->
-  <ellipse cx="45" cy="87" rx="2" ry="1.5" fill="#c0987c" opacity="0.5"/>
-
-  <!-- COLLAR gold -->
-  <rect x="34" y="90" width="22" height="7" rx="2" fill="#d4a843"/>
-  <rect x="36" y="91" width="18" height="5" rx="1" fill="#e8c050"/>
-  <line x1="45" y1="91" x2="45" y2="96" stroke="#b08020" stroke-width="1"/>
-
-  <!-- RED TUNIC (detailed) -->
-  <!-- Main body -->
-  <rect x="26" y="96" width="38" height="50" rx="4" fill="#b01020"/>
-  <!-- Tunic shading -->
-  <rect x="26" y="96" width="10" height="50" rx="4" fill="#900010" opacity="0.5"/>
-  <rect x="54" y="96" width="10" height="50" rx="4" fill="#900010" opacity="0.5"/>
-  <!-- Center seam -->
-  <line x1="45" y1="97" x2="45" y2="144" stroke="#800010" stroke-width="1"/>
-  <!-- Gold buttons row -->
-  <circle cx="45" cy="103" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="112" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="121" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="130" r="2.5" fill="#d4a843"/>
-  <circle cx="45" cy="139" r="2.5" fill="#d4a843"/>
-  <!-- Button highlight -->
-  <circle cx="44" cy="102" r="1" fill="#f0c060" opacity="0.7"/>
-  <circle cx="44" cy="111" r="1" fill="#f0c060" opacity="0.7"/>
-  <!-- Shoulder epaulettes -->
-  <rect x="22" y="96" width="10" height="6" rx="2" fill="#d4a843"/>
-  <rect x="58" y="96" width="10" height="6" rx="2" fill="#d4a843"/>
-  <!-- Epaulette fringe -->
-  <line x1="22" y1="102" x2="22" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="24" y1="102" x2="24" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="26" y1="102" x2="26" y2="110" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="28" y1="102" x2="28" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="30" y1="102" x2="30" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="60" y1="102" x2="60" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="62" y1="102" x2="62" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="64" y1="102" x2="64" y2="110" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="66" y1="102" x2="66" y2="109" stroke="#d4a843" stroke-width="1.5"/>
-  <line x1="68" y1="102" x2="68" y2="108" stroke="#d4a843" stroke-width="1.5"/>
-  <!-- Cross belt -->
-  <line x1="26" y1="97" x2="58" y2="143" stroke="#d4a843" stroke-width="2.5"/>
-  <ellipse cx="42" cy="120" rx="4" ry="4" fill="#c8102e" stroke="#d4a843" stroke-width="1.5"/>
-  <ellipse cx="42" cy="120" rx="2" ry="2" fill="#d4a843"/>
-  <!-- Belt at waist -->
-  <rect x="26" y="140" width="38" height="6" rx="1" fill="#111"/>
-  <rect x="40" y="140" width="10" height="6" fill="#d4a843"/>
-  <rect x="43" y="141" width="4" height="4" fill="#b08020"/>
-
-  <!-- ARMS (red sleeves) -->
-  <!-- Left arm -->
-  <rect x="14" y="98" width="13" height="35" rx="5" fill="#b01020"/>
-  <!-- Cuff left -->
-  <rect x="13" y="128" width="14" height="7" rx="3" fill="#d4a843"/>
-  <!-- Left hand -->
-  <ellipse cx="20" cy="140" rx="5" ry="4" fill="#d4b896"/>
-  <line x1="17" y1="143" x2="16" y2="146" stroke="#c4a886" stroke-width="1.5"/>
-  <line x1="20" y1="144" x2="19" y2="147" stroke="#c4a886" stroke-width="1.5"/>
-  <line x1="23" y1="143" x2="22" y2="146" stroke="#c4a886" stroke-width="1.5"/>
-
-  <!-- Right arm -->
-  <rect x="63" y="98" width="13" height="35" rx="5" fill="#b01020"/>
-  <!-- Cuff right -->
-  <rect x="63" y="128" width="14" height="7" rx="3" fill="#d4a843"/>
-  <!-- Right hand - THUMB UP position (default) -->
-  <ellipse cx="70" cy="140" rx="5" ry="4" fill="#d4b896"/>
-  <!-- Thumb up elements (hidden/shown by JS) -->
-  <g id="guard-right-thumbup">
-    <rect x="68" y="130" width="5" height="11" rx="2.5" fill="#d4b896"/>
-    <ellipse cx="70.5" cy="130" rx="2.5" ry="2.5" fill="#d4b896"/>
-    <!-- Thumb nail -->
-    <ellipse cx="70.5" cy="129" rx="1.5" ry="1" fill="#e8c8a8"/>
-  </g>
-  <!-- Hands on head elements (hidden by default) -->
-  <g id="guard-right-handsup" display="none">
-    <line x1="20" y1="138" x2="30" y2="68" stroke="#b01020" stroke-width="10" stroke-linecap="round"/>
-    <line x1="70" y1="138" x2="60" y2="68" stroke="#b01020" stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="30" cy="66" rx="6" ry="5" fill="#d4b896"/>
-    <ellipse cx="60" cy="66" rx="6" ry="5" fill="#d4b896"/>
-  </g>
-
-  <!-- BLACK TROUSERS -->
-  <!-- Left leg -->
-  <rect x="28" y="145" width="14" height="42" rx="3" fill="#111"/>
-  <!-- Right leg -->
-  <rect x="48" y="145" width="14" height="42" rx="3" fill="#111"/>
-  <!-- Red stripe down each leg -->
-  <line x1="35" y1="145" x2="35" y2="186" stroke="#c8102e" stroke-width="2"/>
-  <line x1="55" y1="145" x2="55" y2="186" stroke="#c8102e" stroke-width="2"/>
-  <!-- Trouser crease -->
-  <line x1="35" y1="145" x2="35" y2="186" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
-  <line x1="55" y1="145" x2="55" y2="186" stroke="#1a1a1a" stroke-width="1" opacity="0.5"/>
-
-  <!-- BLACK SHOES (polished) -->
-  <!-- Left shoe -->
-  <ellipse cx="32" cy="190" rx="10" ry="5" fill="#0a0a0a"/>
-  <ellipse cx="30" cy="189" rx="5" ry="3" fill="#1a1a1a"/>
-  <ellipse cx="28" cy="189" rx="3" ry="2" fill="#222" opacity="0.5"/>
-  <!-- Right shoe -->
-  <ellipse cx="58" cy="190" rx="10" ry="5" fill="#0a0a0a"/>
-  <ellipse cx="56" cy="189" rx="5" ry="3" fill="#1a1a1a"/>
-  <ellipse cx="54" cy="189" rx="3" ry="2" fill="#222" opacity="0.5"/>
-
-  <!-- Shoe shine highlight -->
-  <ellipse cx="28" cy="188" rx="3" ry="1.5" fill="white" opacity="0.15"/>
-  <ellipse cx="54" cy="188" rx="3" ry="1.5" fill="white" opacity="0.15"/>
-
-  <defs>
-    <pattern id="fur" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="0.8" fill="#2a2a2a"/>
-      <circle cx="3" cy="3" r="0.8" fill="#1a1a1a"/>
-    </pattern>
-  </defs>
-</svg>
+    <div class="arena-center">
+      <div class="combo-badge" id="combo-badge"></div>
+    </div>
+    <div class="guard-side">
+      <canvas id="guard-right" class="guard-canvas" width="100" height="200" style="width:100px;height:200px"></canvas>
+    </div>
   </div>
 
   <div class="defi-card" id="defi-card" style="display:none">
@@ -565,14 +235,12 @@ select,button{font-family:'Courier New',Courier,monospace}
     <div class="defi-q-text" id="dq-text"></div>
     <div class="defi-reveal" id="dq-reveal" style="display:none"></div>
   </div>
-
   <div class="defi-choices" id="defi-choices" style="display:none">
     <button class="choice-btn" id="ch0" onclick="defiAnswer(0)"></button>
     <button class="choice-btn" id="ch1" onclick="defiAnswer(1)"></button>
     <button class="choice-btn" id="ch2" onclick="defiAnswer(2)"></button>
     <button class="choice-btn" id="ch3" onclick="defiAnswer(3)"></button>
   </div>
-
   <button class="defi-ctrl-btn btn-start" id="btn-start" onclick="defiStart()">👑 Commencer le Défi</button>
   <button class="defi-ctrl-btn btn-next" id="btn-next" onclick="defiNext()" style="display:none">Suivant ▶</button>
   <button class="defi-ctrl-btn btn-restart" id="btn-restart" onclick="defiStart()" style="display:none">↺ Recommencer</button>
@@ -598,6 +266,235 @@ select,button{font-family:'Courier New',Courier,monospace}
 const PRENOM='Larsen';
 const ALL=[["Fiche 1","La vie quotidienne","wake up","se réveiller","I wake up at 7 every morning."],["Fiche 1","La vie quotidienne","alarm clock","réveil","My alarm clock rings too early."],["Fiche 1","La vie quotidienne","get dressed","s'habiller","She gets dressed quickly."],["Fiche 1","La vie quotidienne","breakfast","petit-déjeuner","I never skip breakfast."],["Fiche 1","La vie quotidienne","commute","trajet domicile-travail","His commute takes 45 minutes."],["Fiche 1","La vie quotidienne","rush hour","heure de pointe","Avoid driving during rush hour."],["Fiche 1","La vie quotidienne","grocery shopping","faire les courses","Let's go grocery shopping today."],["Fiche 1","La vie quotidienne","household chores","tâches ménagères","We share the household chores."],["Fiche 1","La vie quotidienne","do the dishes","faire la vaisselle","It's your turn to do the dishes."],["Fiche 1","La vie quotidienne","vacuum","passer l'aspirateur","I vacuum the flat every week."],["Fiche 1","La vie quotidienne","laundry","lessive","The laundry is in the machine."],["Fiche 1","La vie quotidienne","iron","repasser","He hates ironing his shirts."],["Fiche 1","La vie quotidienne","take a shower","prendre une douche","She takes a shower every evening."],["Fiche 1","La vie quotidienne","brush teeth","se brosser les dents","Brush your teeth twice a day."],["Fiche 1","La vie quotidienne","go to bed","aller se coucher","I go to bed at 11 pm."],["Fiche 1","La vie quotidienne","nap","sieste","A short nap can boost energy."],["Fiche 1","La vie quotidienne","neighbourhood","quartier","We live in a quiet neighbourhood."],["Fiche 1","La vie quotidienne","flat / apartment","appartement","They rent a flat in the city centre."],["Fiche 1","La vie quotidienne","landlord","propriétaire","Our landlord raised the rent."],["Fiche 1","La vie quotidienne","tenant","locataire","She is a reliable tenant."],["Fiche 1","La vie quotidienne","bill","facture","Did you pay the electricity bill?"],["Fiche 1","La vie quotidienne","rent","loyer","Rent in Paris is very expensive."],["Fiche 1","La vie quotidienne","furniture","mobilier","We bought new furniture last month."],["Fiche 1","La vie quotidienne","living room","salon","The cat sleeps in the living room."],["Fiche 1","La vie quotidienne","bedroom","chambre","Her bedroom faces the garden."],["Fiche 1","La vie quotidienne","bathroom","salle de bain","The bathroom needs renovating."],["Fiche 1","La vie quotidienne","kitchen","cuisine","He loves cooking in the kitchen."],["Fiche 1","La vie quotidienne","balcony","balcon","We have breakfast on the balcony."],["Fiche 1","La vie quotidienne","front door","porte d'entrée","Don't forget to lock the front door."],["Fiche 1","La vie quotidienne","staircase","escalier","The staircase is very steep."],["Fiche 1","La vie quotidienne","lift / elevator","ascenseur","The lift is out of order again."],["Fiche 1","La vie quotidienne","public transport","transports en commun","I use public transport every day."],["Fiche 1","La vie quotidienne","subway / underground","métro","The subway is faster than the bus."],["Fiche 1","La vie quotidienne","bus stop","arrêt de bus","We met at the bus stop."],["Fiche 1","La vie quotidienne","platform","quai","The train leaves from platform 3."],["Fiche 1","La vie quotidienne","ticket","billet / ticket","I forgot my ticket at home."],["Fiche 1","La vie quotidienne","schedule / timetable","horaire","Check the train schedule online."],["Fiche 1","La vie quotidienne","delay","retard","There is a 20-minute delay."],["Fiche 1","La vie quotidienne","on time","à l'heure","The bus arrived on time."],["Fiche 1","La vie quotidienne","errand","course / commission","I have a few errands to run."],["Fiche 1","La vie quotidienne","queue / line","file d'attente","The queue at the post office was long."],["Fiche 1","La vie quotidienne","cashier","caissier/ière","The cashier was very friendly."],["Fiche 1","La vie quotidienne","receipt","reçu / ticket de caisse","Keep your receipt for returns."],["Fiche 1","La vie quotidienne","change","monnaie","Do you have change for a 20?"],["Fiche 1","La vie quotidienne","cash","espèces","Many shops still prefer cash."],["Fiche 1","La vie quotidienne","debit card","carte bancaire","Can I pay by debit card?"],["Fiche 1","La vie quotidienne","bank account","compte bancaire","Open a bank account online."],["Fiche 1","La vie quotidienne","withdraw","retirer de l'argent","I need to withdraw some cash."],["Fiche 1","La vie quotidienne","budget","budget","Stick to your monthly budget."],["Fiche 1","La vie quotidienne","savings","économies","She puts money into her savings."],["Fiche 1","La vie quotidienne","daily routine","routine quotidienne","A good daily routine is key."],["Fiche 1","La vie quotidienne","appointment","rendez-vous","I have a dentist appointment."],["Fiche 1","La vie quotidienne","reminder","rappel","Set a reminder on your phone."],["Fiche 1","La vie quotidienne","to-do list","liste de tâches","I write a to-do list every morning."],["Fiche 1","La vie quotidienne","habit","habitude","Walking is a healthy habit."],["Fiche 1","La vie quotidienne","meal","repas","We always eat three meals a day."],["Fiche 1","La vie quotidienne","snack","en-cas","I had a snack between meetings."],["Fiche 1","La vie quotidienne","leftovers","restes","We ate leftovers for dinner."],["Fiche 1","La vie quotidienne","takeaway","plat à emporter","Let's order a takeaway tonight."],["Fiche 1","La vie quotidienne","recipe","recette","This recipe is very easy to follow."],["Fiche 1","La vie quotidienne","ingredients","ingrédients","Buy fresh ingredients at the market."],["Fiche 1","La vie quotidienne","microwave","micro-ondes","Heat it up in the microwave."],["Fiche 1","La vie quotidienne","fridge","réfrigérateur","The fridge needs cleaning."],["Fiche 1","La vie quotidienne","oven","four","Preheat the oven to 180°C."],["Fiche 1","La vie quotidienne","rubbish / trash","ordures / déchets","Take out the rubbish, please."],["Fiche 1","La vie quotidienne","recycle","recycler","We recycle glass and paper."],["Fiche 1","La vie quotidienne","mail / post","courrier","There's a letter in the mail."],["Fiche 1","La vie quotidienne","parcel","colis","A parcel arrived this morning."],["Fiche 1","La vie quotidienne","neighbour","voisin(e)","Our neighbours are very kind."],["Fiche 1","La vie quotidienne","noise","bruit","The noise kept me awake."],["Fiche 1","La vie quotidienne","pet","animal de compagnie","Do you have a pet?"],["Fiche 1","La vie quotidienne","walk the dog","promener le chien","I walk the dog twice a day."],["Fiche 1","La vie quotidienne","plants","plantes","She waters her plants every morning."],["Fiche 1","La vie quotidienne","window","fenêtre","Open the window, it's hot."],["Fiche 1","La vie quotidienne","curtains","rideaux","Close the curtains before bed."],["Fiche 1","La vie quotidienne","heating","chauffage","Turn on the heating, it's cold."],["Fiche 1","La vie quotidienne","air conditioning","climatisation","The air conditioning broke down."],["Fiche 1","La vie quotidienne","power cut","coupure de courant","There was a power cut last night."],["Fiche 1","La vie quotidienne","plumber","plombier","We called a plumber for the leak."],["Fiche 1","La vie quotidienne","electrician","électricien","The electrician fixed the socket."],["Fiche 1","La vie quotidienne","cleaning products","produits ménagers","Buy cleaning products at the store."],["Fiche 1","La vie quotidienne","mop","serpillière","She mopped the kitchen floor."],["Fiche 1","La vie quotidienne","broom","balai","Grab the broom and sweep up."],["Fiche 1","La vie quotidienne","duvet","couette","This duvet is warm and light."],["Fiche 1","La vie quotidienne","pillow","oreiller","I sleep with two pillows."],["Fiche 1","La vie quotidienne","wardrobe","armoire / penderie","My wardrobe is full of clothes."],["Fiche 1","La vie quotidienne","mirror","miroir","She looked in the mirror."],["Fiche 1","La vie quotidienne","shelf","étagère","Put the books on the shelf."],["Fiche 1","La vie quotidienne","socket / outlet","prise électrique","The socket is behind the sofa."],["Fiche 1","La vie quotidienne","switch","interrupteur","Flip the switch to turn it off."],["Fiche 1","La vie quotidienne","leak","fuite","There's a water leak in the ceiling."],["Fiche 1","La vie quotidienne","repair","réparer","Can you repair the broken chair?"],["Fiche 1","La vie quotidienne","move in","emménager","We move in next Saturday."],["Fiche 1","La vie quotidienne","move out","déménager","They moved out last month."],["Fiche 1","La vie quotidienne","spring cleaning","grand ménage de printemps","I do spring cleaning every April."],["Fiche 1","La vie quotidienne","home delivery","livraison à domicile","Home delivery is very convenient."],["Fiche 1","La vie quotidienne","doorbell","sonnette","Ring the doorbell when you arrive."],["Fiche 1","La vie quotidienne","spare key","clé de secours","I left a spare key with my neighbour."],["Fiche 2","Le corps & la santé","head","tête","She has a terrible headache."],["Fiche 2","Le corps & la santé","hair","cheveux","He cut his hair short."],["Fiche 2","Le corps & la santé","forehead","front","She wiped sweat from her forehead."],["Fiche 2","Le corps & la santé","eyebrow","sourcil","He raised an eyebrow in surprise."],["Fiche 2","Le corps & la santé","eyelash","cil","She has long eyelashes."],["Fiche 2","Le corps & la santé","cheek","joue","The baby has chubby cheeks."],["Fiche 2","Le corps & la santé","chin","menton","He scratched his chin while thinking."],["Fiche 2","Le corps & la santé","jaw","mâchoire","She clenched her jaw from stress."],["Fiche 2","Le corps & la santé","neck","cou","My neck is stiff today."],["Fiche 2","Le corps & la santé","shoulder","épaule","He shrugged his shoulders."],["Fiche 2","Le corps & la santé","arm","bras","She broke her arm skiing."],["Fiche 2","Le corps & la santé","elbow","coude","Don't lean on your elbows at the table."],["Fiche 2","Le corps & la santé","wrist","poignet","She wore a bracelet on her wrist."],["Fiche 2","Le corps & la santé","finger","doigt","I cut my finger chopping vegetables."],["Fiche 2","Le corps & la santé","thumb","pouce","Give me a thumbs up if you agree."],["Fiche 2","Le corps & la santé","chest","poitrine / torse","He has chest pain after running."],["Fiche 2","Le corps & la santé","back","dos","My back hurts from sitting all day."],["Fiche 2","Le corps & la santé","spine","colonne vertébrale","Good posture protects your spine."],["Fiche 2","Le corps & la santé","hip","hanche","She had hip surgery last year."],["Fiche 2","Le corps & la santé","knee","genou","Her knee hurts when she runs."],["Fiche 2","Le corps & la santé","ankle","cheville","He sprained his ankle playing football."],["Fiche 2","Le corps & la santé","heel","talon","These shoes hurt my heels."],["Fiche 2","Le corps & la santé","toe","orteil","She stubbed her toe on the table."],["Fiche 2","Le corps & la santé","lung","poumon","Smoking damages the lungs."],["Fiche 2","Le corps & la santé","heart","cœur","Exercise is good for the heart."],["Fiche 2","Le corps & la santé","liver","foie","Alcohol affects the liver."],["Fiche 2","Le corps & la santé","kidney","rein","She donated a kidney to her brother."],["Fiche 2","Le corps & la santé","stomach","estomac","I have an upset stomach."],["Fiche 2","Le corps & la santé","muscle","muscle","He pulled a muscle at the gym."],["Fiche 2","Le corps & la santé","bone","os","Calcium keeps your bones strong."],["Fiche 2","Le corps & la santé","blood","sang","He donated blood last week."],["Fiche 2","Le corps & la santé","skin","peau","Wear sunscreen to protect your skin."],["Fiche 2","Le corps & la santé","symptom","symptôme","What are your symptoms?"],["Fiche 2","Le corps & la santé","fever","fièvre","She has a high fever."],["Fiche 2","Le corps & la santé","cough","toux","He has a dry cough."],["Fiche 2","Le corps & la santé","sneeze","éternuer / éternuement","Cover your mouth when you sneeze."],["Fiche 2","Le corps & la santé","sore throat","mal de gorge","I have a sore throat."],["Fiche 2","Le corps & la santé","runny nose","nez qui coule","She has a runny nose."],["Fiche 2","Le corps & la santé","headache","mal de tête","Take a painkiller for your headache."],["Fiche 2","Le corps & la santé","nausea","nausée","The medication caused nausea."],["Fiche 2","Le corps & la santé","dizziness","vertiges / étourdissements","She felt dizziness after standing up."],["Fiche 2","Le corps & la santé","rash","éruption cutanée","He developed a rash on his arm."],["Fiche 2","Le corps & la santé","allergy","allergie","She has a pollen allergy."],["Fiche 2","Le corps & la santé","injury","blessure","He suffered a serious injury."],["Fiche 2","Le corps & la santé","wound","plaie / blessure","Clean the wound with antiseptic."],["Fiche 2","Le corps & la santé","bruise","bleu / contusion","She has a bruise on her leg."],["Fiche 2","Le corps & la santé","sprain","entorse","He has a sprained wrist."],["Fiche 2","Le corps & la santé","fracture","fracture","The X-ray showed a fracture."],["Fiche 2","Le corps & la santé","infection","infection","The wound got infected."],["Fiche 2","Le corps & la santé","prescription","ordonnance","You need a prescription for this."],["Fiche 2","Le corps & la santé","medication / medicine","médicament","Take this medication twice a day."],["Fiche 2","Le corps & la santé","painkiller","analgésique / antidouleur","She took a painkiller for her back."],["Fiche 2","Le corps & la santé","antibiotic","antibiotique","Antibiotics don't work on viruses."],["Fiche 2","Le corps & la santé","dosage","posologie / dose","What is the correct dosage?"],["Fiche 2","Le corps & la santé","side effects","effets secondaires","This drug has few side effects."],["Fiche 2","Le corps & la santé","blood pressure","tension artérielle","His blood pressure is too high."],["Fiche 2","Le corps & la santé","blood test","analyse de sang","The doctor ordered a blood test."],["Fiche 2","Le corps & la santé","scan / MRI","scanner / IRM","She had an MRI on her knee."],["Fiche 2","Le corps & la santé","surgery","chirurgie / opération","He needs knee surgery."],["Fiche 2","Le corps & la santé","surgeon","chirurgien(ne)","The surgeon was very skilled."],["Fiche 2","Le corps & la santé","anaesthetic","anesthésique","The anaesthetic worked quickly."],["Fiche 2","Le corps & la santé","recovery","rétablissement / guérison","She had a quick recovery."],["Fiche 2","Le corps & la santé","GP / doctor","médecin généraliste","I booked an appointment with my GP."],["Fiche 2","Le corps & la santé","specialist","spécialiste","He was referred to a specialist."],["Fiche 2","Le corps & la santé","physiotherapist","kinésithérapeute","She sees a physiotherapist weekly."],["Fiche 2","Le corps & la santé","pharmacy / chemist","pharmacie","Pick up the pills at the pharmacy."],["Fiche 2","Le corps & la santé","waiting room","salle d'attente","The waiting room was packed."],["Fiche 2","Le corps & la santé","health insurance","assurance maladie","Check what your health insurance covers."],["Fiche 2","Le corps & la santé","emergency","urgence","Call 15 in case of emergency."],["Fiche 2","Le corps & la santé","ambulance","ambulance","An ambulance arrived in minutes."],["Fiche 2","Le corps & la santé","first aid","premiers secours","She took a first aid course."],["Fiche 2","Le corps & la santé","vaccine","vaccin","Have you had your flu vaccine?"],["Fiche 2","Le corps & la santé","immune system","système immunitaire","Exercise boosts the immune system."],["Fiche 2","Le corps & la santé","virus","virus","This virus spreads very quickly."],["Fiche 2","Le corps & la santé","bacteria","bactérie","Bacteria can cause infections."],["Fiche 2","Le corps & la santé","chronic","chronique","He has a chronic back condition."],["Fiche 2","Le corps & la santé","mental health","santé mentale","Mental health is equally important."],["Fiche 2","Le corps & la santé","anxiety","anxiété","She suffers from anxiety."],["Fiche 2","Le corps & la santé","depression","dépression","Depression is a serious illness."],["Fiche 2","Le corps & la santé","stress","stress","Work-related stress is common."],["Fiche 2","Le corps & la santé","insomnia","insomnie","She has been dealing with insomnia."],["Fiche 2","Le corps & la santé","therapy","thérapie","He started therapy last month."],["Fiche 2","Le corps & la santé","well-being","bien-être","Yoga improves overall well-being."],["Fiche 2","Le corps & la santé","diet","régime alimentaire","A balanced diet is essential."],["Fiche 2","Le corps & la santé","exercise","exercice physique","Regular exercise keeps you healthy."],["Fiche 2","Le corps & la santé","sleep","sommeil","Adults need 7-8 hours of sleep."],["Fiche 2","Le corps & la santé","hydration","hydratation","Stay hydrated throughout the day."],["Fiche 2","Le corps & la santé","obesity","obésité","Obesity increases health risks."],["Fiche 2","Le corps & la santé","diabetes","diabète","He manages his diabetes with insulin."],["Fiche 2","Le corps & la santé","asthma","asthme","She uses an inhaler for her asthma."],["Fiche 2","Le corps & la santé","cancer","cancer","Early detection saves lives."],["Fiche 2","Le corps & la santé","stroke","AVC","He had a stroke at age 60."],["Fiche 2","Le corps & la santé","heart attack","crise cardiaque","The paramedics treated a heart attack."],["Fiche 2","Le corps & la santé","disability","handicap","The building has ramps for disability access."],["Fiche 2","Le corps & la santé","crutches","béquilles","She walked on crutches for weeks."],["Fiche 3","Travail & entreprise","job / position","poste / emploi","She applied for a new job."],["Fiche 3","Travail & entreprise","career","carrière","He has built a successful career."],["Fiche 3","Travail & entreprise","employee","employé(e)","The company has 500 employees."],["Fiche 3","Travail & entreprise","employer","employeur","Your employer must sign this form."],["Fiche 3","Travail & entreprise","colleague","collègue","She gets along well with her colleagues."],["Fiche 3","Travail & entreprise","manager","manager / responsable","My manager gave me good feedback."],["Fiche 3","Travail & entreprise","CEO","PDG / directeur général","The CEO announced a new strategy."],["Fiche 3","Travail & entreprise","HR department","service RH","Contact the HR department for details."],["Fiche 3","Travail & entreprise","internship","stage","She completed an internship in London."],["Fiche 3","Travail & entreprise","full-time","à plein temps","He works full-time at the agency."],["Fiche 3","Travail & entreprise","part-time","à temps partiel","She works part-time on Fridays."],["Fiche 3","Travail & entreprise","freelance","indépendant / freelance","He works as a freelance designer."],["Fiche 3","Travail & entreprise","remote work","télétravail","Remote work became very common."],["Fiche 3","Travail & entreprise","office","bureau","I work from the office three days a week."],["Fiche 3","Travail & entreprise","open space","open space","The open space encourages collaboration."],["Fiche 3","Travail & entreprise","meeting","réunion","We have a team meeting every Monday."],["Fiche 3","Travail & entreprise","agenda","ordre du jour","What's on the agenda today?"],["Fiche 3","Travail & entreprise","deadline","échéance / date limite","The deadline is Friday at noon."],["Fiche 3","Travail & entreprise","workload","charge de travail","Her workload has increased recently."],["Fiche 3","Travail & entreprise","overtime","heures supplémentaires","He worked overtime this week."],["Fiche 3","Travail & entreprise","salary","salaire","She negotiated a higher salary."],["Fiche 3","Travail & entreprise","raise / pay rise","augmentation de salaire","He asked for a pay rise."],["Fiche 3","Travail & entreprise","bonus","prime","She received a year-end bonus."],["Fiche 3","Travail & entreprise","payslip","fiche de paie","Check your payslip for errors."],["Fiche 3","Travail & entreprise","contract","contrat","She signed a permanent contract."],["Fiche 3","Travail & entreprise","notice period","préavis","The notice period is three months."],["Fiche 3","Travail & entreprise","redundancy","licenciement économique","200 workers face redundancy."],["Fiche 3","Travail & entreprise","resign","démissionner","He decided to resign last week."],["Fiche 3","Travail & entreprise","promotion","promotion","She was offered a promotion."],["Fiche 3","Travail & entreprise","appraisal","entretien d'évaluation","His annual appraisal went well."],["Fiche 3","Travail & entreprise","performance","performance / rendement","Performance reviews happen quarterly."],["Fiche 3","Travail & entreprise","KPI","indicateur clé de performance","We track several KPIs monthly."],["Fiche 3","Travail & entreprise","target","objectif / cible","Did you reach your sales target?"],["Fiche 3","Travail & entreprise","project","projet","The project launches next week."],["Fiche 3","Travail & entreprise","task","tâche","Assign tasks to the right people."],["Fiche 3","Travail & entreprise","priority","priorité","Set your priorities for the week."],["Fiche 3","Travail & entreprise","feedback","retour / commentaire","She gave constructive feedback."],["Fiche 3","Travail & entreprise","brainstorming","remue-méninges","We had a brainstorming session."],["Fiche 3","Travail & entreprise","strategy","stratégie","The new strategy focuses on growth."],["Fiche 3","Travail & entreprise","budget","budget","The project is over budget."],["Fiche 3","Travail & entreprise","invoice","facture","Send the invoice by end of day."],["Fiche 3","Travail & entreprise","client / customer","client(e)","We need to keep clients satisfied."],["Fiche 3","Travail & entreprise","supplier","fournisseur","We changed our main supplier."],["Fiche 3","Travail & entreprise","market","marché","The luxury market is growing."],["Fiche 3","Travail & entreprise","competitor","concurrent(e)","Know your main competitors well."],["Fiche 3","Travail & entreprise","brand","marque","The brand is well known globally."],["Fiche 3","Travail & entreprise","revenue","chiffre d'affaires","Revenue increased by 15% this year."],["Fiche 3","Travail & entreprise","profit","bénéfice","The company made a record profit."],["Fiche 3","Travail & entreprise","loss","perte","They reported a financial loss."],["Fiche 3","Travail & entreprise","investment","investissement","It's a long-term investment."],["Fiche 3","Travail & entreprise","shareholder","actionnaire","Shareholders voted on the merger."],["Fiche 3","Travail & entreprise","board of directors","conseil d'administration","The board approved the plan."],["Fiche 3","Travail & entreprise","startup","startup","She founded a startup at 25."],["Fiche 3","Travail & entreprise","pitch","présentation / pitch","His investor pitch was excellent."],["Fiche 3","Travail & entreprise","networking","réseautage","Networking is key in this industry."],["Fiche 3","Travail & entreprise","business card","carte de visite","Here is my business card."],["Fiche 3","Travail & entreprise","conference","conférence","She spoke at an industry conference."],["Fiche 3","Travail & entreprise","trade fair","salon professionnel","We exhibited at the Paris trade fair."],["Fiche 3","Travail & entreprise","headquarters","siège social","The headquarters is in Geneva."],["Fiche 3","Travail & entreprise","branch","succursale / agence","We opened a branch in Dubai."],["Fiche 3","Travail & entreprise","merger","fusion","The merger was completed last year."],["Fiche 3","Travail & entreprise","acquisition","acquisition / rachat","The acquisition cost €2 billion."],["Fiche 3","Travail & entreprise","restructuring","restructuration","A restructuring was announced."],["Fiche 3","Travail & entreprise","delegation","délégation / déléguer","He has to learn to delegate tasks."],["Fiche 3","Travail & entreprise","leadership","leadership / direction","Good leadership inspires teams."],["Fiche 3","Travail & entreprise","teamwork","travail d'équipe","Teamwork leads to better results."],["Fiche 3","Travail & entreprise","skills","compétences","List your skills on your CV."],["Fiche 3","Travail & entreprise","CV / résumé","CV","Update your CV before applying."],["Fiche 3","Travail & entreprise","cover letter","lettre de motivation","Write a strong cover letter."],["Fiche 3","Travail & entreprise","job interview","entretien d'embauche","She has a job interview tomorrow."],["Fiche 3","Travail & entreprise","hiring","recrutement","The hiring process took two months."],["Fiche 3","Travail & entreprise","onboarding","intégration (d'un nouveau salarié)","Good onboarding reduces turnover."],["Fiche 3","Travail & entreprise","training","formation","He attended a training session."],["Fiche 3","Travail & entreprise","workshop","atelier / formation pratique","She ran a workshop on leadership."],["Fiche 3","Travail & entreprise","annual report","rapport annuel","The annual report is published online."],["Fiche 3","Travail & entreprise","NDA","accord de confidentialité","Sign the NDA before the meeting."],["Fiche 3","Travail & entreprise","compliance","conformité","Compliance with regulations is mandatory."],["Fiche 3","Travail & entreprise","audit","audit","An internal audit is underway."],["Fiche 3","Travail & entreprise","spreadsheet","tableur / feuille de calcul","The data is in the spreadsheet."],["Fiche 3","Travail & entreprise","presentation","présentation","She prepared a Powerpoint presentation."],["Fiche 3","Travail & entreprise","email","e-mail","Reply to the email as soon as possible."],["Fiche 3","Travail & entreprise","cc / bcc","en copie / copie cachée","Put me in cc on that email."],["Fiche 3","Travail & entreprise","attachment","pièce jointe","See the attachment for details."],["Fiche 3","Travail & entreprise","calendar","agenda / calendrier","Block time in your calendar."],["Fiche 3","Travail & entreprise","business trip","voyage d'affaires","He is on a business trip in Tokyo."],["Fiche 3","Travail & entreprise","expense report","note de frais","Submit your expense report by Friday."],["Fiche 3","Travail & entreprise","reimbursement","remboursement","Reimbursement takes two weeks."],["Fiche 3","Travail & entreprise","coworking space","espace de coworking","He rents a desk in a coworking space."],["Fiche 3","Travail & entreprise","work-life balance","équilibre vie pro/perso","She values work-life balance."],["Fiche 3","Travail & entreprise","burnout","épuisement professionnel","Burnout is increasingly common."],["Fiche 4","Voyages & tourisme","passport","passeport","Don't forget your passport."],["Fiche 4","Voyages & tourisme","visa","visa","You need a visa for this country."],["Fiche 4","Voyages & tourisme","boarding pass","carte d'embarquement","Show your boarding pass at the gate."],["Fiche 4","Voyages & tourisme","check-in","enregistrement","Online check-in opens 24 hours before."],["Fiche 4","Voyages & tourisme","luggage / baggage","bagages","Her luggage was overweight."],["Fiche 4","Voyages & tourisme","carry-on bag","bagage cabine","You can bring one carry-on bag."],["Fiche 4","Voyages & tourisme","departure","départ","What time is the departure?"],["Fiche 4","Voyages & tourisme","arrival","arrivée","The arrival is scheduled at 9 am."],["Fiche 4","Voyages & tourisme","flight","vol","The flight was delayed by two hours."],["Fiche 4","Voyages & tourisme","gate","porte d'embarquement","Go to gate B12."],["Fiche 4","Voyages & tourisme","terminal","terminal","Which terminal is Air France?"],["Fiche 4","Voyages & tourisme","runway","piste d'atterrissage","The plane taxied down the runway."],["Fiche 4","Voyages & tourisme","land","atterrir","The plane will land in 20 minutes."],["Fiche 4","Voyages & tourisme","take off","décoller","We took off on time."],["Fiche 4","Voyages & tourisme","turbulence","turbulences","There was strong turbulence over the Alps."],["Fiche 4","Voyages & tourisme","connecting flight","vol de correspondance","My connecting flight was missed."],["Fiche 4","Voyages & tourisme","layover","escale","We have a 2-hour layover in Frankfurt."],["Fiche 4","Voyages & tourisme","customs","douane","Go through customs after landing."],["Fiche 4","Voyages & tourisme","border control","contrôle aux frontières","Border control checked our passports."],["Fiche 4","Voyages & tourisme","exchange rate","taux de change","Check the exchange rate before leaving."],["Fiche 4","Voyages & tourisme","local currency","monnaie locale","Change money to local currency."],["Fiche 4","Voyages & tourisme","hotel","hôtel","We booked a hotel near the centre."],["Fiche 4","Voyages & tourisme","hostel","auberge de jeunesse","She stayed in a hostel to save money."],["Fiche 4","Voyages & tourisme","room service","service en chambre","We ordered room service for dinner."],["Fiche 4","Voyages & tourisme","receptionist","réceptionniste","The receptionist was very helpful."],["Fiche 4","Voyages & tourisme","reservation","réservation","I made a reservation for two nights."],["Fiche 4","Voyages & tourisme","check out","partir / rendre la chambre","Check out is at 11 am."],["Fiche 4","Voyages & tourisme","tourism","tourisme","Tourism is the main industry here."],["Fiche 4","Voyages & tourisme","tourist attraction","attraction touristique","The Colosseum is a major attraction."],["Fiche 4","Voyages & tourisme","guided tour","visite guidée","We took a guided tour of the city."],["Fiche 4","Voyages & tourisme","map","carte / plan","Do you have a map of the city?"],["Fiche 4","Voyages & tourisme","souvenir","souvenir","She bought souvenirs for her family."],["Fiche 4","Voyages & tourisme","sightseeing","visite touristique","We spent the day sightseeing."],["Fiche 4","Voyages & tourisme","landmark","monument / point de repère","The Eiffel Tower is a famous landmark."],["Fiche 4","Voyages & tourisme","monument","monument","The monument was built in 1820."],["Fiche 4","Voyages & tourisme","museum","musée","The museum closes at 6 pm."],["Fiche 4","Voyages & tourisme","exhibition","exposition","There's an exhibition on Matisse."],["Fiche 4","Voyages & tourisme","cathedral","cathédrale","We visited the Gothic cathedral."],["Fiche 4","Voyages & tourisme","castle","château fort","The castle overlooks the valley."],["Fiche 4","Voyages & tourisme","beach","plage","We relaxed on the beach all day."],["Fiche 4","Voyages & tourisme","coast","côte","The coast here is very rugged."],["Fiche 4","Voyages & tourisme","mountain","montagne","They hiked in the mountains."],["Fiche 4","Voyages & tourisme","hiking","randonnée","We went hiking for the weekend."],["Fiche 4","Voyages & tourisme","trail","sentier","Follow the yellow trail markers."],["Fiche 4","Voyages & tourisme","sunscreen","crème solaire","Apply sunscreen before going out."],["Fiche 4","Voyages & tourisme","backpacker","voyageur/se avec sac à dos","She was a backpacker for six months."],["Fiche 4","Voyages & tourisme","itinerary","itinéraire","We planned a detailed itinerary."],["Fiche 4","Voyages & tourisme","jet lag","décalage horaire","I'm suffering from jet lag."],["Fiche 4","Voyages & tourisme","culture shock","choc culturel","Culture shock can be overwhelming."],["Fiche 4","Voyages & tourisme","language barrier","barrière de la langue","The language barrier was challenging."],["Fiche 4","Voyages & tourisme","phrase book","guide de conversation","Use a phrase book for basic expressions."],["Fiche 4","Voyages & tourisme","local cuisine","cuisine locale","We tried the local cuisine every night."],["Fiche 4","Voyages & tourisme","street food","nourriture de rue","Street food is cheap and delicious."],["Fiche 4","Voyages & tourisme","restaurant","restaurant","Book a restaurant in advance."],["Fiche 4","Voyages & tourisme","menu","menu / carte","Can we see the menu, please?"],["Fiche 4","Voyages & tourisme","tip","pourboire","Leave a tip if the service is good."],["Fiche 4","Voyages & tourisme","budget travel","voyager avec un petit budget","Budget travel requires planning."],["Fiche 4","Voyages & tourisme","travel insurance","assurance voyage","Always buy travel insurance."],["Fiche 4","Voyages & tourisme","package holiday","séjour tout compris","They booked a package holiday."],["Fiche 4","Voyages & tourisme","cruise","croisière","They went on a Caribbean cruise."],["Fiche 4","Voyages & tourisme","round trip","aller-retour","I booked a round trip to Tokyo."],["Fiche 4","Voyages & tourisme","one-way ticket","aller simple","She bought a one-way ticket."],["Fiche 4","Voyages & tourisme","taxi","taxi","Take a taxi from the airport."],["Fiche 4","Voyages & tourisme","car rental","location de voiture","Car rental is essential in rural areas."],["Fiche 4","Voyages & tourisme","GPS / navigation","GPS / navigation","Use GPS to find the hotel."],["Fiche 4","Voyages & tourisme","timetable","horaire","Check the train timetable."],["Fiche 4","Voyages & tourisme","platform","quai","The train is on platform 5."],["Fiche 4","Voyages & tourisme","ferry","ferry","We took a ferry to the island."],["Fiche 4","Voyages & tourisme","harbour / port","port","The ship docked at the harbour."],["Fiche 4","Voyages & tourisme","expedition","expédition","They went on a polar expedition."],["Fiche 4","Voyages & tourisme","adventure","aventure","Travel is the greatest adventure."],["Fiche 4","Voyages & tourisme","nomad","nomade","She lives as a digital nomad."],["Fiche 4","Voyages & tourisme","destination","destination","Paris is a dream destination."],["Fiche 4","Voyages & tourisme","off the beaten track","hors des sentiers battus","We prefer off-the-beaten-track places."],["Fiche 4","Voyages & tourisme","homestay","séjour chez l'habitant","A homestay is very enriching."],["Fiche 4","Voyages & tourisme","volunteering abroad","volontariat à l'étranger","He did volunteering abroad for a year."],["Fiche 4","Voyages & tourisme","travel blog","blog de voyage","She writes a popular travel blog."],["Fiche 4","Voyages & tourisme","currency","monnaie / devise","What currency do they use there?"],["Fiche 4","Voyages & tourisme","time zone","fuseau horaire","New York is in a different time zone."],["Fiche 4","Voyages & tourisme","stamp (passport)","tampon (passeport)","My passport is full of stamps."],["Fiche 4","Voyages & tourisme","embassy","ambassade","Contact your embassy if in trouble."],["Fiche 4","Voyages & tourisme","travel ban","interdiction de voyager","A travel ban was imposed."],["Fiche 4","Voyages & tourisme","quarantine","quarantaine","Travellers had to quarantine on arrival."],["Fiche 4","Voyages & tourisme","sea / ocean","mer / océan","She loves swimming in the sea."],["Fiche 4","Voyages & tourisme","island","île","We escaped to a tiny island."],["Fiche 4","Voyages & tourisme","tropical","tropical","The tropical climate is very humid."],["Fiche 4","Voyages & tourisme","season","saison","High season is summer."],["Fiche 4","Voyages & tourisme","peak hours","heures de pointe","Avoid visiting during peak hours."],["Fiche 4","Voyages & tourisme","low season","basse saison","Flights are cheaper in low season."],["Fiche 4","Voyages & tourisme","heritage site","site du patrimoine","It is a UNESCO heritage site."],["Fiche 4","Voyages & tourisme","photography","photographie","Photography is not allowed inside."],["Fiche 4","Voyages & tourisme","selfie","selfie","She took a selfie with the monument."],["Fiche 4","Voyages & tourisme","luggage tag","étiquette de bagage","Attach a luggage tag to your bag."],["Fiche 5","Nature & environnement","forest","forêt","We walked through a dense forest."],["Fiche 5","Nature & environnement","jungle","jungle","The jungle is full of exotic animals."],["Fiche 5","Nature & environnement","desert","désert","The Sahara is the world's largest desert."],["Fiche 5","Nature & environnement","grassland","prairie","Zebras graze on the grassland."],["Fiche 5","Nature & environnement","valley","vallée","The village sits in a beautiful valley."],["Fiche 5","Nature & environnement","cliff","falaise","The cliff drops 200 metres to the sea."],["Fiche 5","Nature & environnement","waterfall","cascade","The waterfall is stunning in spring."],["Fiche 5","Nature & environnement","river","rivière / fleuve","We swam in the river."],["Fiche 5","Nature & environnement","lake","lac","They live near a mountain lake."],["Fiche 5","Nature & environnement","glacier","glacier","The glacier is melting rapidly."],["Fiche 5","Nature & environnement","volcano","volcan","The volcano erupted last night."],["Fiche 5","Nature & environnement","earthquake","tremblement de terre","A 6.0 earthquake struck the region."],["Fiche 5","Nature & environnement","flood","inondation","The flood destroyed many homes."],["Fiche 5","Nature & environnement","drought","sécheresse","A severe drought hit the region."],["Fiche 5","Nature & environnement","wildfire","incendie de forêt","A wildfire burned 10,000 hectares."],["Fiche 5","Nature & environnement","storm","tempête","A violent storm hit the coast."],["Fiche 5","Nature & environnement","tornado","tornade","A tornado swept through the town."],["Fiche 5","Nature & environnement","hurricane","ouragan","The hurricane caused major damage."],["Fiche 5","Nature & environnement","heatwave","canicule","A heatwave struck southern Europe."],["Fiche 5","Nature & environnement","snowstorm","tempête de neige","A snowstorm closed the highways."],["Fiche 5","Nature & environnement","fog","brouillard","Dense fog caused flight delays."],["Fiche 5","Nature & environnement","rainbow","arc-en-ciel","A rainbow appeared after the storm."],["Fiche 5","Nature & environnement","sunrise","lever de soleil","We woke up for the sunrise."],["Fiche 5","Nature & environnement","sunset","coucher de soleil","The sunset over the sea was magical."],["Fiche 5","Nature & environnement","tide","marée","High tide is at 6 am."],["Fiche 5","Nature & environnement","wave","vague","The waves were too strong for swimming."],["Fiche 5","Nature & environnement","coral reef","récif corallien","The coral reef is home to many fish."],["Fiche 5","Nature & environnement","ecosystem","écosystème","Each ecosystem has its own balance."],["Fiche 5","Nature & environnement","biodiversity","biodiversité","Biodiversity is under threat."],["Fiche 5","Nature & environnement","species","espèce","Many species are endangered."],["Fiche 5","Nature & environnement","endangered","en voie de disparition","The tiger is an endangered species."],["Fiche 5","Nature & environnement","extinct","éteint","The dodo bird is now extinct."],["Fiche 5","Nature & environnement","predator","prédateur","The lion is an apex predator."],["Fiche 5","Nature & environnement","prey","proie","The rabbit is easy prey for foxes."],["Fiche 5","Nature & environnement","wildlife","faune sauvage","Africa has incredible wildlife."],["Fiche 5","Nature & environnement","mammal","mammifère","Whales are the largest mammals."],["Fiche 5","Nature & environnement","reptile","reptile","Snakes are reptiles."],["Fiche 5","Nature & environnement","amphibian","amphibien","Frogs are amphibians."],["Fiche 5","Nature & environnement","bird of prey","rapace","The eagle is a powerful bird of prey."],["Fiche 5","Nature & environnement","insect","insecte","Bees are essential insects."],["Fiche 5","Nature & environnement","pollination","pollinisation","Bees help with pollination."],["Fiche 5","Nature & environnement","soil","sol / terre","Healthy soil is key to farming."],["Fiche 5","Nature & environnement","roots","racines","Tree roots go very deep."],["Fiche 5","Nature & environnement","seed","graine","Plant the seeds in spring."],["Fiche 5","Nature & environnement","leaf","feuille","The leaves change colour in autumn."],["Fiche 5","Nature & environnement","bark","écorce","The bark of the oak is rough."],["Fiche 5","Nature & environnement","canopy","canopée","The canopy blocks most sunlight."],["Fiche 5","Nature & environnement","carbon dioxide","dioxyde de carbone (CO₂)","Trees absorb carbon dioxide."],["Fiche 5","Nature & environnement","oxygen","oxygène","Forests produce oxygen."],["Fiche 5","Nature & environnement","greenhouse gas","gaz à effet de serre","Methane is a greenhouse gas."],["Fiche 5","Nature & environnement","climate change","changement climatique","Climate change is accelerating."],["Fiche 5","Nature & environnement","global warming","réchauffement climatique","Global warming affects all regions."],["Fiche 5","Nature & environnement","carbon footprint","empreinte carbone","Reduce your carbon footprint."],["Fiche 5","Nature & environnement","renewable energy","énergie renouvelable","Solar is a renewable energy source."],["Fiche 5","Nature & environnement","solar panel","panneau solaire","They installed solar panels."],["Fiche 5","Nature & environnement","wind turbine","éolienne","Wind turbines dot the landscape."],["Fiche 5","Nature & environnement","fossil fuel","combustible fossile","We must reduce fossil fuel use."],["Fiche 5","Nature & environnement","pollution","pollution","Air pollution is a serious problem."],["Fiche 5","Nature & environnement","plastic waste","déchets plastiques","Plastic waste pollutes the oceans."],["Fiche 5","Nature & environnement","recycling","recyclage","Recycling reduces landfill waste."],["Fiche 5","Nature & environnement","deforestation","déforestation","Deforestation threatens biodiversity."],["Fiche 5","Nature & environnement","habitat","habitat","Urban growth destroys natural habitats."],["Fiche 5","Nature & environnement","conservation","conservation","Conservation efforts are crucial."],["Fiche 5","Nature & environnement","sustainable","durable / soutenable","We need sustainable development."],["Fiche 5","Nature & environnement","organic farming","agriculture biologique","Organic farming avoids pesticides."],["Fiche 5","Nature & environnement","pesticide","pesticide","Pesticides harm bees and insects."],["Fiche 5","Nature & environnement","water cycle","cycle de l'eau","Rain is part of the water cycle."],["Fiche 5","Nature & environnement","groundwater","eau souterraine","Groundwater is used for irrigation."],["Fiche 5","Nature & environnement","irrigation","irrigation","Efficient irrigation saves water."],["Fiche 5","Nature & environnement","ozone layer","couche d'ozone","The ozone layer protects us from UV rays."],["Fiche 5","Nature & environnement","atmosphere","atmosphère","The atmosphere filters solar radiation."],["Fiche 5","Nature & environnement","tectonic plates","plaques tectoniques","Earthquakes occur at tectonic plates."],["Fiche 5","Nature & environnement","erosion","érosion","Coastal erosion is worsening."],["Fiche 5","Nature & environnement","wetland","zone humide","Wetlands are vital for biodiversity."],["Fiche 5","Nature & environnement","mangrove","mangrove","Mangroves protect coastlines."],["Fiche 5","Nature & environnement","savanna","savane","Elephants roam the savanna."],["Fiche 5","Nature & environnement","tundra","toundra","The tundra is frozen most of the year."],["Fiche 5","Nature & environnement","permafrost","pergélisol","Melting permafrost releases methane."],["Fiche 5","Nature & environnement","sea level rise","montée du niveau de la mer","Sea level rise threatens coastal cities."],["Fiche 5","Nature & environnement","carbon neutral","neutre en carbone","The company aims to be carbon neutral."],["Fiche 5","Nature & environnement","net zero","zéro émission nette","Net zero by 2050 is the target."],["Fiche 5","Nature & environnement","ecology","écologie","She studied ecology at university."],["Fiche 5","Nature & environnement","naturalist","naturaliste","He is a passionate naturalist."],["Fiche 5","Nature & environnement","national park","parc national","Yellowstone is a famous national park."],["Fiche 5","Nature & environnement","nature reserve","réserve naturelle","The reserve protects rare species."],["Fiche 5","Nature & environnement","rewilding","réensauvagement","Rewilding restores natural ecosystems."],["Fiche 5","Nature & environnement","poaching","braconnage","Poaching threatens rhinos and elephants."],["Fiche 5","Nature & environnement","depletion","épuisement / appauvrissement","Resource depletion is a global concern."],["Fiche 5","Nature & environnement","algae","algues","Algae blooms signal water pollution."],["Fiche 6","Émotions & relations","happy","heureux/se","She looked happy at the news."],["Fiche 6","Émotions & relations","sad","triste","He seemed sad after the call."],["Fiche 6","Émotions & relations","angry","en colère","She was angry at the decision."],["Fiche 6","Émotions & relations","anxious","anxieux/se","He felt anxious before the exam."],["Fiche 6","Émotions & relations","excited","enthousiaste / excité(e)","She was excited about the trip."],["Fiche 6","Émotions & relations","nervous","nerveux/se","He was nervous before his speech."],["Fiche 6","Émotions & relations","proud","fier/ière","She felt proud of her achievement."],["Fiche 6","Émotions & relations","ashamed","honteux/se","He was ashamed of what he said."],["Fiche 6","Émotions & relations","jealous","jaloux/se","She felt jealous of her sister."],["Fiche 6","Émotions & relations","grateful","reconnaissant(e)","I'm grateful for your help."],["Fiche 6","Émotions & relations","relieved","soulagé(e)","She was relieved to pass the test."],["Fiche 6","Émotions & relations","disappointed","déçu(e)","He was disappointed by the result."],["Fiche 6","Émotions & relations","frustrated","frustré(e)","She felt frustrated by the delay."],["Fiche 6","Émotions & relations","lonely","seul(e) / solitaire","He felt lonely after moving."],["Fiche 6","Émotions & relations","confident","sûr(e) de soi / confiant(e)","She gave a confident speech."],["Fiche 6","Émotions & relations","overwhelmed","débordé(e) / submergé(e)","She felt overwhelmed by the workload."],["Fiche 6","Émotions & relations","nostalgic","nostalgique","Old music makes me feel nostalgic."],["Fiche 6","Émotions & relations","hopeful","plein(e) d'espoir","She was hopeful about the future."],["Fiche 6","Émotions & relations","hurt","blessé(e)","He was hurt by her words."],["Fiche 6","Émotions & relations","surprised","surpris(e)","She was surprised by the gift."],["Fiche 6","Émotions & relations","bored","ennuyé(e)","He was bored during the lecture."],["Fiche 6","Émotions & relations","curious","curieux/se","Children are naturally curious."],["Fiche 6","Émotions & relations","embarrassed","gêné(e) / embarrassé(e)","He was embarrassed by his mistake."],["Fiche 6","Émotions & relations","scared","effrayé(e) / avoir peur","She was scared of the dark."],["Fiche 6","Émotions & relations","grief","deuil / chagrin","She is still dealing with grief."],["Fiche 6","Émotions & relations","affection","affection","He showed great affection for her."],["Fiche 6","Émotions & relations","empathy","empathie","Empathy is a key social skill."],["Fiche 6","Émotions & relations","compassion","compassion","She showed compassion for others."],["Fiche 6","Émotions & relations","trust","confiance","Trust is built over time."],["Fiche 6","Émotions & relations","loyalty","loyauté","His loyalty to his friends is admirable."],["Fiche 6","Émotions & relations","respect","respect","Show respect to everyone you meet."],["Fiche 6","Émotions & relations","admire","admirer","She admires her mother deeply."],["Fiche 6","Émotions & relations","support","soutenir / soutien","He supports her in every decision."],["Fiche 6","Émotions & relations","encourage","encourager","She encouraged him to pursue his dream."],["Fiche 6","Émotions & relations","argue","se disputer","They often argue about small things."],["Fiche 6","Émotions & relations","forgive","pardonner","It takes courage to forgive."],["Fiche 6","Émotions & relations","apologise","s'excuser","He apologised for being late."],["Fiche 6","Émotions & relations","misunderstanding","malentendu","It was just a misunderstanding."],["Fiche 6","Émotions & relations","compromise","compromis","A healthy relationship needs compromise."],["Fiche 6","Émotions & relations","commitment","engagement","She showed real commitment to the cause."],["Fiche 6","Émotions & relations","marriage","mariage","They celebrated 25 years of marriage."],["Fiche 6","Émotions & relations","divorce","divorce","The divorce was painful for everyone."],["Fiche 6","Émotions & relations","couple","couple","They are a very happy couple."],["Fiche 6","Émotions & relations","partner","partenaire / conjoint(e)","She introduced her partner at the event."],["Fiche 6","Émotions & relations","ex","ex-conjoint(e)","He still talks to his ex."],["Fiche 6","Émotions & relations","crush","béguin / coup de cœur","She has a crush on her colleague."],["Fiche 6","Émotions & relations","heartbreak","chagrin d'amour","Heartbreak takes time to heal."],["Fiche 6","Émotions & relations","friendship","amitié","Their friendship lasted decades."],["Fiche 6","Émotions & relations","best friend","meilleur(e) ami(e)","She is my best friend since school."],["Fiche 6","Émotions & relations","acquaintance","connaissance","He's an acquaintance, not a close friend."],["Fiche 6","Émotions & relations","sibling","frère ou sœur","She has two siblings."],["Fiche 6","Émotions & relations","parent","parent","Good parents listen to their children."],["Fiche 6","Émotions & relations","grandparent","grand-parent","She visits her grandparents weekly."],["Fiche 6","Émotions & relations","relative","proche / parent (famille)","A distant relative attended the wedding."],["Fiche 6","Émotions & relations","stepfamily","belle-famille / famille recomposée","Stepfamily dynamics can be complex."],["Fiche 6","Émotions & relations","adopted","adopté(e)","He was adopted as a baby."],["Fiche 6","Émotions & relations","generation","génération","Each generation faces new challenges."],["Fiche 6","Émotions & relations","bond","lien / attachement","They share a strong emotional bond."],["Fiche 6","Émotions & relations","attachment","attachement","Secure attachment builds confidence."],["Fiche 6","Émotions & relations","intimacy","intimité","Emotional intimacy builds over time."],["Fiche 6","Émotions & relations","boundary","limite / frontière","She set clear personal boundaries."],["Fiche 6","Émotions & relations","jealousy","jalousie","Jealousy can damage a relationship."],["Fiche 6","Émotions & relations","toxic relationship","relation toxique","She left a toxic relationship."],["Fiche 6","Émotions & relations","abuse","abus / maltraitance","Abuse can take many forms."],["Fiche 6","Émotions & relations","healing","guérison / reconstruction","Healing after trauma takes time."],["Fiche 6","Émotions & relations","breakup","rupture","The breakup was mutual."],["Fiche 6","Émotions & relations","reconciliation","réconciliation","They achieved a peaceful reconciliation."],["Fiche 6","Émotions & relations","love at first sight","coup de foudre","It was love at first sight."],["Fiche 6","Émotions & relations","long-distance relationship","relation à distance","A long-distance relationship is challenging."],["Fiche 6","Émotions & relations","proposal","demande en mariage","He planned a romantic proposal."],["Fiche 6","Émotions & relations","engagement","fiançailles","Their engagement was announced last week."],["Fiche 6","Émotions & relations","wedding","mariage / noce","The wedding was in the south of France."],["Fiche 6","Émotions & relations","honeymoon","lune de miel","They went to Bali for their honeymoon."],["Fiche 6","Émotions & relations","anniversary","anniversaire (de couple)","It's their 10th anniversary today."],["Fiche 6","Émotions & relations","breakup","rupture","A bad breakup can affect self-esteem."],["Fiche 6","Émotions & relations","reunion","retrouvailles","The family reunion was emotional."],["Fiche 6","Émotions & relations","mourn","pleurer / être en deuil","She is still mourning her loss."],["Fiche 6","Émotions & relations","homesick","nostalgique de son foyer","He felt homesick while abroad."],["Fiche 6","Émotions & relations","sense of belonging","sentiment d'appartenance","A sense of belonging is essential."],["Fiche 6","Émotions & relations","self-esteem","estime de soi","She has healthy self-esteem."],["Fiche 6","Émotions & relations","resilience","résilience","Resilience helps you face adversity."],["Fiche 6","Émotions & relations","vulnerability","vulnérabilité","Showing vulnerability is not weakness."],["Fiche 6","Émotions & relations","conflict resolution","résolution de conflits","Good leaders handle conflict resolution."],["Fiche 6","Émotions & relations","open communication","communication ouverte","Open communication prevents misunderstandings."],["Fiche 6","Émotions & relations","shared values","valeurs communes","Shared values strengthen a bond."],["Fiche 6","Émotions & relations","unconditional love","amour inconditionnel","She showed unconditional love."],["Fiche 6","Émotions & relations","toxic positivity","positivité toxique","Toxic positivity dismisses real feelings."],["Fiche 6","Émotions & relations","emotional intelligence","intelligence émotionnelle","Emotional intelligence helps in all relationships."],["Fiche 7","Alimentation & cuisine","ingredient","ingrédient","List all ingredients before cooking."],["Fiche 7","Alimentation & cuisine","recipe","recette","This is my grandmother's recipe."],["Fiche 7","Alimentation & cuisine","portion","portion","The portion size was very generous."],["Fiche 7","Alimentation & cuisine","serving","part / portion servie","This recipe makes four servings."],["Fiche 7","Alimentation & cuisine","calories","calories","This dessert is high in calories."],["Fiche 7","Alimentation & cuisine","nutrition","nutrition","Good nutrition is essential for health."],["Fiche 7","Alimentation & cuisine","protein","protéine","Chicken is a great source of protein."],["Fiche 7","Alimentation & cuisine","carbohydrate","glucide","Pasta is rich in carbohydrates."],["Fiche 7","Alimentation & cuisine","fat","lipide / matière grasse","Avocado contains healthy fats."],["Fiche 7","Alimentation & cuisine","fibre","fibre","Vegetables are high in fibre."],["Fiche 7","Alimentation & cuisine","vitamin","vitamine","Citrus fruits contain vitamin C."],["Fiche 7","Alimentation & cuisine","mineral","minéral","Iron is an essential mineral."],["Fiche 7","Alimentation & cuisine","antioxidant","antioxydant","Berries are full of antioxidants."],["Fiche 7","Alimentation & cuisine","dairy","produit laitier","She avoids dairy products."],["Fiche 7","Alimentation & cuisine","gluten-free","sans gluten","He follows a gluten-free diet."],["Fiche 7","Alimentation & cuisine","vegan","végétalien(ne)","She switched to a vegan diet."],["Fiche 7","Alimentation & cuisine","vegetarian","végétarien(ne)","He has been vegetarian for 10 years."],["Fiche 7","Alimentation & cuisine","organic","biologique / bio","She buys organic vegetables."],["Fiche 7","Alimentation & cuisine","processed food","aliment transformé","Avoid processed food when possible."],["Fiche 7","Alimentation & cuisine","junk food","malbouffe","Too much junk food is unhealthy."],["Fiche 7","Alimentation & cuisine","fresh produce","produits frais","Fresh produce is sold at the market."],["Fiche 7","Alimentation & cuisine","seasonal","de saison","Eat seasonal fruits and vegetables."],["Fiche 7","Alimentation & cuisine","local","local(e)","Supporting local farmers is important."],["Fiche 7","Alimentation & cuisine","chop","couper / hacher","Chop the onions finely."],["Fiche 7","Alimentation & cuisine","slice","trancher / couper en tranches","Slice the bread thinly."],["Fiche 7","Alimentation & cuisine","grate","râper","Grate the cheese over the pasta."],["Fiche 7","Alimentation & cuisine","peel","éplucher","Peel the potatoes before boiling."],["Fiche 7","Alimentation & cuisine","dice","couper en dés","Dice the tomatoes and add them."],["Fiche 7","Alimentation & cuisine","mince","hacher finement","Mince the garlic and fry it."],["Fiche 7","Alimentation & cuisine","stir","remuer / mélanger","Stir the sauce constantly."],["Fiche 7","Alimentation & cuisine","whisk","fouetter / battre","Whisk the eggs until fluffy."],["Fiche 7","Alimentation & cuisine","knead","pétrir","Knead the dough for 10 minutes."],["Fiche 7","Alimentation & cuisine","marinate","mariner / faire mariner","Marinate the chicken overnight."],["Fiche 7","Alimentation & cuisine","season","assaisonner","Season with salt and pepper."],["Fiche 7","Alimentation & cuisine","boil","faire bouillir / bouillir","Boil the water before adding pasta."],["Fiche 7","Alimentation & cuisine","simmer","mijoter","Let the sauce simmer for 20 minutes."],["Fiche 7","Alimentation & cuisine","fry","frire / faire sauter","Fry the onions in olive oil."],["Fiche 7","Alimentation & cuisine","deep fry","frire (dans la friture)","Deep fry the chips until golden."],["Fiche 7","Alimentation & cuisine","grill","griller / faire griller","Grill the salmon for 5 minutes."],["Fiche 7","Alimentation & cuisine","roast","rôtir","Roast the chicken at 180°C."],["Fiche 7","Alimentation & cuisine","bake","faire cuire au four","Bake the cake for 30 minutes."],["Fiche 7","Alimentation & cuisine","steam","cuire à la vapeur","Steam the vegetables to keep nutrients."],["Fiche 7","Alimentation & cuisine","poach","pocher","Poach the eggs in simmering water."],["Fiche 7","Alimentation & cuisine","caramelise","caraméliser","Caramelise the onions slowly."],["Fiche 7","Alimentation & cuisine","blend","mixer / mélanger","Blend the soup until smooth."],["Fiche 7","Alimentation & cuisine","strain","égoutter / filtrer","Strain the pasta after cooking."],["Fiche 7","Alimentation & cuisine","drain","égoutter","Drain the can of chickpeas."],["Fiche 7","Alimentation & cuisine","toss","mélanger (une salade)","Toss the salad with the dressing."],["Fiche 7","Alimentation & cuisine","garnish","garnir / décoration","Garnish with fresh parsley."],["Fiche 7","Alimentation & cuisine","plate","dresser (dans une assiette)","Plate the dish carefully."],["Fiche 7","Alimentation & cuisine","entrée / starter","entrée","The starter was a smoked salmon salad."],["Fiche 7","Alimentation & cuisine","main course","plat principal","The main course was lamb."],["Fiche 7","Alimentation & cuisine","dessert","dessert","She skipped dessert."],["Fiche 7","Alimentation & cuisine","side dish","accompagnement","Rice was served as a side dish."],["Fiche 7","Alimentation & cuisine","appetiser","amuse-bouche / mise en bouche","They served appetisers with drinks."],["Fiche 7","Alimentation & cuisine","buffet","buffet","Dinner was served as a buffet."],["Fiche 7","Alimentation & cuisine","set menu","menu fixe","The restaurant offers a set menu."],["Fiche 7","Alimentation & cuisine","à la carte","à la carte","We ordered à la carte."],["Fiche 7","Alimentation & cuisine","sweet","sucré(e)","The cake was too sweet."],["Fiche 7","Alimentation & cuisine","savoury","salé(e)","I prefer savoury to sweet."],["Fiche 7","Alimentation & cuisine","spicy","épicé(e)","The curry was very spicy."],["Fiche 7","Alimentation & cuisine","bland","fade / sans goût","The soup was a bit bland."],["Fiche 7","Alimentation & cuisine","sour","acide / aigre","The lemon juice was very sour."],["Fiche 7","Alimentation & cuisine","bitter","amer/ère","Dark chocolate is bitter."],["Fiche 7","Alimentation & cuisine","salty","salé(e)","This cheese is very salty."],["Fiche 7","Alimentation & cuisine","crispy","croustillant(e)","The battered fish was crispy."],["Fiche 7","Alimentation & cuisine","tender","tendre / fondant(e)","The beef was perfectly tender."],["Fiche 7","Alimentation & cuisine","overcooked","trop cuit(e)","The chicken was overcooked."],["Fiche 7","Alimentation & cuisine","undercooked","pas assez cuit(e)","The pasta was slightly undercooked."],["Fiche 7","Alimentation & cuisine","takeaway","à emporter / plat à emporter","Let's get a takeaway tonight."],["Fiche 7","Alimentation & cuisine","food delivery","livraison de repas","Food delivery apps are everywhere."],["Fiche 7","Alimentation & cuisine","allergy","allergie alimentaire","She has a nut allergy."],["Fiche 7","Alimentation & cuisine","intolerance","intolérance","He has lactose intolerance."],["Fiche 7","Alimentation & cuisine","food waste","gaspillage alimentaire","Food waste is a global problem."],["Fiche 7","Alimentation & cuisine","expiry date","date d'expiration","Check the expiry date on the label."],["Fiche 7","Alimentation & cuisine","pantry","garde-manger","The pantry is well stocked."],["Fiche 7","Alimentation & cuisine","fridge","réfrigérateur","Put the leftovers in the fridge."],["Fiche 7","Alimentation & cuisine","freezer","congélateur","Freeze the portions for later."],["Fiche 7","Alimentation & cuisine","pan","poêle","Heat the oil in a pan."],["Fiche 7","Alimentation & cuisine","pot / saucepan","casserole","Bring water to a boil in a pot."],["Fiche 7","Alimentation & cuisine","colander","passoire","Rinse the vegetables in a colander."],["Fiche 7","Alimentation & cuisine","cutting board","planche à découper","Use a separate cutting board for meat."],["Fiche 7","Alimentation & cuisine","apron","tablier","Put on an apron before cooking."],["Fiche 7","Alimentation & cuisine","utensils","ustensiles","All utensils are in the top drawer."],["Fiche 8","Culture & loisirs","leisure","loisir / temps libre","What do you do in your leisure time?"],["Fiche 8","Culture & loisirs","hobby","hobby / passe-temps","Her hobby is ceramics."],["Fiche 8","Culture & loisirs","pastime","passe-temps","Reading is his favourite pastime."],["Fiche 8","Culture & loisirs","performance","spectacle / représentation","The performance lasted two hours."],["Fiche 8","Culture & loisirs","concert","concert","She went to a jazz concert."],["Fiche 8","Culture & loisirs","exhibition","exposition","The photography exhibition was stunning."],["Fiche 8","Culture & loisirs","gallery","galerie","We visited several art galleries."],["Fiche 8","Culture & loisirs","play (theatre)","pièce de théâtre","We saw a play at the National Theatre."],["Fiche 8","Culture & loisirs","opera","opéra","He loves going to the opera."],["Fiche 8","Culture & loisirs","ballet","ballet","She danced ballet as a child."],["Fiche 8","Culture & loisirs","film / movie","film","The film won several awards."],["Fiche 8","Culture & loisirs","documentary","documentaire","He watched a documentary on climate."],["Fiche 8","Culture & loisirs","screenplay","scénario","The screenplay was brilliant."],["Fiche 8","Culture & loisirs","director","réalisateur/trice","The director's new film is out."],["Fiche 8","Culture & loisirs","actor / actress","acteur / actrice","She is a talented actress."],["Fiche 8","Culture & loisirs","soundtrack","bande originale","The soundtrack is amazing."],["Fiche 8","Culture & loisirs","streaming","streaming","She watches shows on streaming platforms."],["Fiche 8","Culture & loisirs","novel","roman","He is reading a 19th-century novel."],["Fiche 8","Culture & loisirs","author","auteur(e)","Who is your favourite author?"],["Fiche 8","Culture & loisirs","chapter","chapitre","She read three chapters last night."],["Fiche 8","Culture & loisirs","plot","intrigue / histoire","The plot of the book is very complex."],["Fiche 8","Culture & loisirs","character","personnage","The main character is fascinating."],["Fiche 8","Culture & loisirs","genre","genre","What genre of music do you prefer?"],["Fiche 8","Culture & loisirs","lyrics","paroles (de chanson)","The lyrics are very poetic."],["Fiche 8","Culture & loisirs","melody","mélodie","The melody stayed in my head."],["Fiche 8","Culture & loisirs","rhythm","rythme","The rhythm of the song is catchy."],["Fiche 8","Culture & loisirs","band / group","groupe (de musique)","Her favourite band is performing tonight."],["Fiche 8","Culture & loisirs","live music","musique en direct","Live music has a unique atmosphere."],["Fiche 8","Culture & loisirs","DJ","DJ","The DJ played until 3 am."],["Fiche 8","Culture & loisirs","festival","festival","She attends a music festival every summer."],["Fiche 8","Culture & loisirs","sport","sport","Sport is a big part of his life."],["Fiche 8","Culture & loisirs","team","équipe","She plays in a volleyball team."],["Fiche 8","Culture & loisirs","match / game","match","The match ended in a draw."],["Fiche 8","Culture & loisirs","tournament","tournoi","He won the chess tournament."],["Fiche 8","Culture & loisirs","championship","championnat","The championship final is in May."],["Fiche 8","Culture & loisirs","athlete","athlète","She is a professional athlete."],["Fiche 8","Culture & loisirs","coach","entraîneur/se","A good coach motivates the team."],["Fiche 8","Culture & loisirs","referee","arbitre","The referee made a controversial call."],["Fiche 8","Culture & loisirs","training","entraînement","She trains every morning."],["Fiche 8","Culture & loisirs","warm-up","échauffement","Always do a warm-up before sport."],["Fiche 8","Culture & loisirs","score","score","What's the score?"],["Fiche 8","Culture & loisirs","win","gagner / victoire","The team won the game."],["Fiche 8","Culture & loisirs","lose","perdre / défaite","They lost by a single goal."],["Fiche 8","Culture & loisirs","draw / tie","match nul","The game ended in a draw."],["Fiche 8","Culture & loisirs","record","record","She broke the world record."],["Fiche 8","Culture & loisirs","spectator","spectateur/trice","Thousands of spectators attended."],["Fiche 8","Culture & loisirs","fan","fan / supporter(trice)","He is a huge football fan."],["Fiche 8","Culture & loisirs","stadium","stade","The stadium holds 80,000 people."],["Fiche 8","Culture & loisirs","broadcast","diffusion / retransmission","The match was broadcast live."],["Fiche 8","Culture & loisirs","highlight","temps fort / résumé","Watch the match highlights."],["Fiche 8","Culture & loisirs","photography","photographie","She studies photography."],["Fiche 8","Culture & loisirs","paint","peindre","She paints landscapes in watercolour."],["Fiche 8","Culture & loisirs","sculpture","sculpture","His sculpture won a prize."],["Fiche 8","Culture & loisirs","sketch","croquis / esquisse","He made a quick sketch."],["Fiche 8","Culture & loisirs","illustration","illustration","The book has beautiful illustrations."],["Fiche 8","Culture & loisirs","craft","artisanat / bricolage créatif","She sells her crafts at the market."],["Fiche 8","Culture & loisirs","pottery","poterie","He took up pottery during lockdown."],["Fiche 8","Culture & loisirs","knitting","tricot","She learned knitting from her mother."],["Fiche 8","Culture & loisirs","sewing","couture","She made the costume by sewing."],["Fiche 8","Culture & loisirs","cooking","cuisine (activité)","Cooking is his main hobby."],["Fiche 8","Culture & loisirs","gardening","jardinage","Gardening relaxes her on weekends."],["Fiche 8","Culture & loisirs","hiking","randonnée","They go hiking every weekend."],["Fiche 8","Culture & loisirs","cycling","cyclisme / vélo","She cycles to work every day."],["Fiche 8","Culture & loisirs","yoga","yoga","He does yoga to manage stress."],["Fiche 8","Culture & loisirs","meditation","méditation","She practises meditation daily."],["Fiche 8","Culture & loisirs","gaming","jeux vidéo","He spends hours gaming on weekends."],["Fiche 8","Culture & loisirs","board game","jeu de société","They played a board game after dinner."],["Fiche 8","Culture & loisirs","puzzle","puzzle / casse-tête","She loves doing jigsaw puzzles."],["Fiche 8","Culture & loisirs","travel","voyager / voyage","Travel broadens the mind."],["Fiche 8","Culture & loisirs","reading","lecture","Reading is the best way to learn."],["Fiche 8","Culture & loisirs","writing","écriture","She keeps a writing journal."],["Fiche 8","Culture & loisirs","blogging","blogging / tenue d'un blog","He started blogging about food."],["Fiche 8","Culture & loisirs","podcast","podcast","She launched a podcast last year."],["Fiche 8","Culture & loisirs","vlog","vlog (blog vidéo)","His travel vlog has many subscribers."],["Fiche 8","Culture & loisirs","cinema","cinéma","Let's go to the cinema on Friday."],["Fiche 8","Culture & loisirs","intermission","entracte","We got drinks during the intermission."],["Fiche 8","Culture & loisirs","subtitles","sous-titres","I watch films with subtitles."],["Fiche 8","Culture & loisirs","dubbed","doublé(e)","Is the film dubbed in French?"],["Fiche 8","Culture & loisirs","cultural heritage","patrimoine culturel","France is rich in cultural heritage."],["Fiche 8","Culture & loisirs","folk music","musique folklorique","Folk music reflects regional traditions."],["Fiche 8","Culture & loisirs","collection","collection","He has a large vinyl collection."],["Fiche 8","Culture & loisirs","antique","antiquité / objet ancien","She collects antiques from flea markets."],["Fiche 8","Culture & loisirs","flea market","brocante / marché aux puces","We found a gem at the flea market."],["Fiche 9","Technologie & numérique","device","appareil / dispositif","She uses several devices daily."],["Fiche 9","Technologie & numérique","smartphone","smartphone","A smartphone is now essential."],["Fiche 9","Technologie & numérique","laptop","ordinateur portable","He works on a laptop."],["Fiche 9","Technologie & numérique","tablet","tablette","She reads on a tablet."],["Fiche 9","Technologie & numérique","screen","écran","The screen is cracked."],["Fiche 9","Technologie & numérique","keyboard","clavier","He types fast on his keyboard."],["Fiche 9","Technologie & numérique","mouse","souris","Use a wireless mouse."],["Fiche 9","Technologie & numérique","charger","chargeur","I forgot my charger at home."],["Fiche 9","Technologie & numérique","battery","batterie","The battery only lasts 3 hours."],["Fiche 9","Technologie & numérique","operating system","système d'exploitation","Which operating system do you use?"],["Fiche 9","Technologie & numérique","software","logiciel","Install the latest software."],["Fiche 9","Technologie & numérique","app","application","She downloaded a new app."],["Fiche 9","Technologie & numérique","update","mise à jour","Install the system update."],["Fiche 9","Technologie & numérique","bug","bug / erreur","There's a bug in the app."],["Fiche 9","Technologie & numérique","crash","plantage","The app crashed during the presentation."],["Fiche 9","Technologie & numérique","reboot / restart","redémarrer","Reboot the computer to fix it."],["Fiche 9","Technologie & numérique","password","mot de passe","Change your password regularly."],["Fiche 9","Technologie & numérique","username","nom d'utilisateur","Your username is already taken."],["Fiche 9","Technologie & numérique","log in / sign in","se connecter","Log in with your email address."],["Fiche 9","Technologie & numérique","log out","se déconnecter","Always log out on shared devices."],["Fiche 9","Technologie & numérique","account","compte","Create a free account."],["Fiche 9","Technologie & numérique","notification","notification","Turn off notifications at night."],["Fiche 9","Technologie & numérique","settings","paramètres","Go to settings to change this."],["Fiche 9","Technologie & numérique","storage","stockage","My phone is low on storage."],["Fiche 9","Technologie & numérique","cloud","cloud / nuage informatique","Back up your files to the cloud."],["Fiche 9","Technologie & numérique","backup","sauvegarde","Do a backup before updating."],["Fiche 9","Technologie & numérique","file","fichier","Open the file from your desktop."],["Fiche 9","Technologie & numérique","folder","dossier","Organise your files into folders."],["Fiche 9","Technologie & numérique","download","télécharger","Download the PDF before the flight."],["Fiche 9","Technologie & numérique","upload","téléverser / envoyer","Upload the document to the platform."],["Fiche 9","Technologie & numérique","internet","internet","She has a fast internet connection."],["Fiche 9","Technologie & numérique","Wi-Fi","Wi-Fi","What's the Wi-Fi password?"],["Fiche 9","Technologie & numérique","broadband","connexion haut débit","We switched to fibre broadband."],["Fiche 9","Technologie & numérique","browser","navigateur","Use a private browser window."],["Fiche 9","Technologie & numérique","search engine","moteur de recherche","Google is the most used search engine."],["Fiche 9","Technologie & numérique","website","site web","Their website needs redesigning."],["Fiche 9","Technologie & numérique","URL / link","URL / lien","Share the URL with your team."],["Fiche 9","Technologie & numérique","cookie","cookie","Accept or decline website cookies."],["Fiche 9","Technologie & numérique","algorithm","algorithme","The algorithm promotes trending content."],["Fiche 9","Technologie & numérique","data","données","Your data is stored securely."],["Fiche 9","Technologie & numérique","database","base de données","The database holds millions of records."],["Fiche 9","Technologie & numérique","server","serveur","The server is down."],["Fiche 9","Technologie & numérique","cybersecurity","cybersécurité","Cybersecurity is a growing field."],["Fiche 9","Technologie & numérique","hacker","hacker / pirate","A hacker accessed the company's data."],["Fiche 9","Technologie & numérique","phishing","hameçonnage / phishing","Don't click on phishing emails."],["Fiche 9","Technologie & numérique","encryption","chiffrement","End-to-end encryption protects messages."],["Fiche 9","Technologie & numérique","firewall","pare-feu","Install a firewall to protect your system."],["Fiche 9","Technologie & numérique","VPN","VPN (réseau privé virtuel)","Use a VPN on public Wi-Fi."],["Fiche 9","Technologie & numérique","social media","réseaux sociaux","Social media is part of daily life."],["Fiche 9","Technologie & numérique","post","publier / publication","She posted a photo on Instagram."],["Fiche 9","Technologie & numérique","share","partager","Share the article with your friends."],["Fiche 9","Technologie & numérique","like","aimer / j'aime","The post got 10,000 likes."],["Fiche 9","Technologie & numérique","comment","commentaire","Leave a comment below the video."],["Fiche 9","Technologie & numérique","follower","abonné(e)","She has 100k followers."],["Fiche 9","Technologie & numérique","influencer","influenceur/se","He is a fitness influencer."],["Fiche 9","Technologie & numérique","content creator","créateur/trice de contenu","Being a content creator is a job."],["Fiche 9","Technologie & numérique","viral","viral(e)","The video went viral overnight."],["Fiche 9","Technologie & numérique","hashtag","hashtag","Add relevant hashtags to your post."],["Fiche 9","Technologie & numérique","reel / short video","reel / vidéo courte","She posts reels every week."],["Fiche 9","Technologie & numérique","stream","diffuser en direct / stream","He streams video games online."],["Fiche 9","Technologie & numérique","podcast","podcast","The podcast has 1 million listeners."],["Fiche 9","Technologie & numérique","e-commerce","commerce en ligne","E-commerce grew rapidly."],["Fiche 9","Technologie & numérique","marketplace","place de marché en ligne","Amazon is a global marketplace."],["Fiche 9","Technologie & numérique","digital payment","paiement numérique","Digital payments are now standard."],["Fiche 9","Technologie & numérique","cryptocurrency","cryptomonnaie","Bitcoin is a well-known cryptocurrency."],["Fiche 9","Technologie & numérique","blockchain","blockchain","Blockchain ensures data transparency."],["Fiche 9","Technologie & numérique","artificial intelligence","intelligence artificielle","AI is transforming many industries."],["Fiche 9","Technologie & numérique","machine learning","apprentissage automatique","Machine learning powers recommendation systems."],["Fiche 9","Technologie & numérique","chatbot","chatbot","The chatbot answered my query instantly."],["Fiche 9","Technologie & numérique","automation","automatisation","Automation affects many jobs."],["Fiche 9","Technologie & numérique","robotics","robotique","Robotics is a fast-growing field."],["Fiche 9","Technologie & numérique","3D printing","impression 3D","3D printing is used in medicine."],["Fiche 9","Technologie & numérique","augmented reality","réalité augmentée","AR overlays digital info on the real world."],["Fiche 9","Technologie & numérique","virtual reality","réalité virtuelle","VR is used in training simulations."],["Fiche 9","Technologie & numérique","drone","drone","Drones deliver packages in some cities."],["Fiche 9","Technologie & numérique","smart home","maison connectée","Smart home devices simplify daily life."],["Fiche 9","Technologie & numérique","wearable","objet connecté portable","She wears a fitness wearable."],["Fiche 9","Technologie & numérique","plug-in","plug-in / extension","Install the browser plug-in."],["Fiche 9","Technologie & numérique","interface","interface","The user interface is very intuitive."],["Fiche 9","Technologie & numérique","open source","open source","The software is open source."],["Fiche 9","Technologie & numérique","digital transformation","transformation numérique","Digital transformation is a priority."],["Fiche 9","Technologie & numérique","tech startup","startup technologique","She joined a tech startup."],["Fiche 9","Technologie & numérique","coding / programming","codage / programmation","She is learning coding online."],["Fiche 9","Technologie & numérique","debugging","débogage","Debugging takes a lot of patience."],["Fiche 10","Société & actualités","government","gouvernement","The government announced a new policy."],["Fiche 10","Société & actualités","parliament","parlement","The bill passed in parliament."],["Fiche 10","Société & actualités","democracy","démocratie","Democracy requires active participation."],["Fiche 10","Société & actualités","election","élection","The election results surprised many."],["Fiche 10","Société & actualités","vote","voter / vote","She voted in the election for the first time."],["Fiche 10","Société & actualités","candidate","candidat(e)","Three candidates ran for president."],["Fiche 10","Société & actualités","party (political)","parti (politique)","Which party do you support?"],["Fiche 10","Société & actualités","policy","politique (mesure)","The new policy affects housing."],["Fiche 10","Société & actualités","legislation","législation","New legislation was introduced."],["Fiche 10","Société & actualités","law","loi","A law was passed last week."],["Fiche 10","Société & actualités","rights","droits","Everyone has the right to education."],["Fiche 10","Société & actualités","freedom of speech","liberté d'expression","Freedom of speech is a core value."],["Fiche 10","Société & actualités","civil society","société civile","Civil society groups protested."],["Fiche 10","Société & actualités","activist","militant(e) / activiste","She is a climate activist."],["Fiche 10","Société & actualités","protest","manifestation / protester","Thousands protested in the streets."],["Fiche 10","Société & actualités","strike","grève","The workers went on strike."],["Fiche 10","Société & actualités","petition","pétition","Sign the petition to stop this."],["Fiche 10","Société & actualités","NGO","ONG","She works for an NGO in Africa."],["Fiche 10","Société & actualités","charity","association caritative","He donates to charity regularly."],["Fiche 10","Société & actualités","inequality","inégalité","Income inequality is growing."],["Fiche 10","Société & actualités","poverty","pauvreté","Poverty affects millions globally."],["Fiche 10","Société & actualités","unemployment","chômage","Unemployment rose during the crisis."],["Fiche 10","Société & actualités","migration","migration","Migration shapes modern cities."],["Fiche 10","Société & actualités","refugee","réfugié(e)","Refugees need international protection."],["Fiche 10","Société & actualités","asylum seeker","demandeur/se d'asile","She applied as an asylum seeker."],["Fiche 10","Société & actualités","integration","intégration","Integration policies vary by country."],["Fiche 10","Société & actualités","discrimination","discrimination","Discrimination in hiring is illegal."],["Fiche 10","Société & actualités","racism","racisme","Racism must be actively combated."],["Fiche 10","Société & actualités","gender equality","égalité des sexes","Gender equality remains a goal."],["Fiche 10","Société & actualités","feminism","féminisme","Feminism advocates for equal rights."],["Fiche 10","Société & actualités","LGBTQ+","LGBTQ+","LGBTQ+ rights have advanced in many countries."],["Fiche 10","Société & actualités","social justice","justice sociale","They fight for social justice."],["Fiche 10","Société & actualités","welfare","aide sociale / bien-être","The welfare system needs reform."],["Fiche 10","Société & actualités","tax","impôt / taxe","She pays income tax each year."],["Fiche 10","Société & actualités","public spending","dépenses publiques","Public spending increased."],["Fiche 10","Société & actualités","budget deficit","déficit budgétaire","The budget deficit widened last year."],["Fiche 10","Société & actualités","inflation","inflation","Inflation has reached a 40-year high."],["Fiche 10","Société & actualités","recession","récession","The economy entered a recession."],["Fiche 10","Société & actualités","GDP","PIB (Produit Intérieur Brut)","GDP growth slowed to 1%."],["Fiche 10","Société & actualités","trade","commerce","International trade is vital."],["Fiche 10","Société & actualités","sanctions","sanctions","New sanctions were imposed."],["Fiche 10","Société & actualités","diplomacy","diplomatie","Diplomacy avoided a crisis."],["Fiche 10","Société & actualités","summit","sommet","The G20 summit was held in Brazil."],["Fiche 10","Société & actualités","treaty","traité","Both countries signed a peace treaty."],["Fiche 10","Société & actualités","conflict","conflit","The conflict has lasted three years."],["Fiche 10","Société & actualités","ceasefire","cessez-le-feu","A ceasefire was announced today."],["Fiche 10","Société & actualités","humanitarian aid","aide humanitaire","Humanitarian aid was sent to the region."],["Fiche 10","Société & actualités","media","médias","Media freedom is under threat."],["Fiche 10","Société & actualités","journalist","journaliste","The journalist was awarded for her work."],["Fiche 10","Société & actualités","breaking news","dernière heure","Breaking news interrupted the broadcast."],["Fiche 10","Société & actualités","headline","titre (de une)","The headline was shocking."],["Fiche 10","Société & actualités","fake news","fausses informations","Fake news spreads quickly online."],["Fiche 10","Société & actualités","misinformation","désinformation","Misinformation can be dangerous."],["Fiche 10","Société & actualités","editorial","éditorial","I read the editorial in Le Monde."],["Fiche 10","Société & actualités","press conference","conférence de presse","The minister held a press conference."],["Fiche 10","Société & actualités","statement","déclaration","She made an official statement."],["Fiche 10","Société & actualités","scandal","scandale","The scandal dominated the news."],["Fiche 10","Société & actualités","corruption","corruption","Anti-corruption measures were introduced."],["Fiche 10","Société & actualités","transparency","transparence","Transparency in government is crucial."],["Fiche 10","Société & actualités","accountability","responsabilité / redevabilité","Politicians must show accountability."],["Fiche 10","Société & actualités","lobby","groupe de pression / lobbying","Big companies lobby governments."],["Fiche 10","Société & actualités","census","recensement","The census is held every 10 years."],["Fiche 10","Société & actualités","statistics","statistiques","Statistics show rising inequality."],["Fiche 10","Société & actualités","public opinion","opinion publique","Public opinion shifted rapidly."],["Fiche 10","Société & actualités","survey","sondage / enquête","A survey showed 60% disapproval."],["Fiche 10","Société & actualités","constitutional","constitutionnel(le)","This measure is unconstitutional."],["Fiche 10","Société & actualités","court","tribunal / cour","The case went to court."],["Fiche 10","Société & actualités","trial","procès","The trial lasted three months."],["Fiche 10","Société & actualités","verdict","verdict","The verdict was read this morning."],["Fiche 10","Société & actualités","sentence","condamnation / peine","He received a five-year sentence."],["Fiche 10","Société & actualités","prison","prison","She was sent to prison."],["Fiche 10","Société & actualités","justice","justice","Everyone deserves access to justice."],["Fiche 10","Société & actualités","reform","réforme","A major education reform was proposed."],["Fiche 10","Société & actualités","universal income","revenu universel","Some countries test a universal income."],["Fiche 10","Société & actualités","public health","santé publique","Public health is a government priority."],["Fiche 10","Société & actualités","education system","système éducatif","The education system needs updating."],["Fiche 10","Société & actualités","climate policy","politique climatique","Stronger climate policy is needed."],["Fiche 10","Société & actualités","green transition","transition verte","The green transition creates new jobs."],["Fiche 10","Société & actualités","social mobility","mobilité sociale","Social mobility remains limited."],["Fiche 10","Société & actualités","digital divide","fracture numérique","The digital divide affects rural areas."],["Fiche 10","Société & actualités","urban planning","urbanisme / planification urbaine","Urban planning shapes how cities grow."],["Fiche 10","Société & actualités","housing crisis","crise du logement","A housing crisis hits major cities."],["Fiche 11","Architecture & design","facade","façade","The facade was renovated last year."],["Fiche 11","Architecture & design","floor plan","plan d'étage / plan au sol","We reviewed the floor plan carefully."],["Fiche 11","Architecture & design","elevation","élévation / coupe façade","She drew the front elevation."],["Fiche 11","Architecture & design","section","coupe (dessin technique)","The section reveals the inner structure."],["Fiche 11","Architecture & design","blueprint","plan / bleu d'architecte","Study the blueprints before building."],["Fiche 11","Architecture & design","scale","échelle","The model is built at 1:100 scale."],["Fiche 11","Architecture & design","load-bearing","porteur(euse)","Don't remove the load-bearing wall."],["Fiche 11","Architecture & design","partition wall","cloison","Add a partition wall to divide the space."],["Fiche 11","Architecture & design","mezzanine","mezzanine","They installed a mezzanine level."],["Fiche 11","Architecture & design","void","vide (architectural)","The void connects both floors visually."],["Fiche 11","Architecture & design","skylight","lucarne / puits de lumière","A skylight brings natural light in."],["Fiche 11","Architecture & design","canopy","auvent / marquise","The canopy protects the entrance."],["Fiche 11","Architecture & design","arcade","arcade","The arcade lines the town square."],["Fiche 11","Architecture & design","colonnade","colonnade","The colonnade dates from Roman times."],["Fiche 11","Architecture & design","pillar / column","pilier / colonne","The columns support the roof."],["Fiche 11","Architecture & design","beam","poutre","The steel beams are exposed."],["Fiche 11","Architecture & design","truss","ferme / treillis","The wooden truss spans the full width."],["Fiche 11","Architecture & design","foundation","fondation","Solid foundations are essential."],["Fiche 11","Architecture & design","slab","dalle","A concrete slab forms the ground floor."],["Fiche 11","Architecture & design","threshold","seuil","The threshold marks the entry."],["Fiche 11","Architecture & design","spatial layout","organisation spatiale","The spatial layout is very efficient."],["Fiche 11","Architecture & design","circulation","circulations","Circulation flows around the central core."],["Fiche 11","Architecture & design","corridor","couloir / corridor","The corridor connects all rooms."],["Fiche 11","Architecture & design","atrium","atrium","The atrium floods the space with light."],["Fiche 11","Architecture & design","courtyard","cour intérieure","The courtyard is a private oasis."],["Fiche 11","Architecture & design","terrace","terrasse","The terrace overlooks the garden."],["Fiche 11","Architecture & design","rooftop","toiture-terrasse / toit","There is a garden on the rooftop."],["Fiche 11","Architecture & design","cladding","revêtement extérieur / bardage","Wooden cladding gives warmth."],["Fiche 11","Architecture & design","rendering","enduit / rendu","The external rendering is in lime."],["Fiche 11","Architecture & design","insulation","isolation","Good insulation reduces energy loss."],["Fiche 11","Architecture & design","glazing","vitrage","Full-height glazing opens the view."],["Fiche 11","Architecture & design","curtain wall","mur-rideau","The curtain wall is all glass."],["Fiche 11","Architecture & design","material","matériau","Choose sustainable materials."],["Fiche 11","Architecture & design","concrete","béton","Raw concrete is used throughout."],["Fiche 11","Architecture & design","timber / wood","bois","Cross-laminated timber is eco-friendly."],["Fiche 11","Architecture & design","steel","acier","The steel structure is fully exposed."],["Fiche 11","Architecture & design","stone","pierre","Local stone was used for the walls."],["Fiche 11","Architecture & design","brick","brique","The brick facade is hand-laid."],["Fiche 11","Architecture & design","tile","carreau / tuile","Terracotta tiles line the floors."],["Fiche 11","Architecture & design","marble","marbre","Marble countertops are classic."],["Fiche 11","Architecture & design","texture","texture","The texture of the wall adds depth."],["Fiche 11","Architecture & design","finish","finition","The finish is matte limestone."],["Fiche 11","Architecture & design","patina","patine","The copper has developed a patina."],["Fiche 11","Architecture & design","palette","palette (de couleurs)","The colour palette is earthy and warm."],["Fiche 11","Architecture & design","proportion","proportion","Proportion is key in classical design."],["Fiche 11","Architecture & design","symmetry","symétrie","The facade has perfect symmetry."],["Fiche 11","Architecture & design","axis","axe","The main axis aligns with the entrance."],["Fiche 11","Architecture & design","perspective","perspective","A long perspective draws the eye."],["Fiche 11","Architecture & design","depth","profondeur","The depth of the space is impressive."],["Fiche 11","Architecture & design","contrast","contraste","Contrast between old and new is bold."],["Fiche 11","Architecture & design","transparency","transparence","Glass creates a sense of transparency."],["Fiche 11","Architecture & design","minimalism","minimalisme","The design embraces minimalism."],["Fiche 11","Architecture & design","brutalism","brutalisme","Brutalist buildings celebrate raw concrete."],["Fiche 11","Architecture & design","modernism","modernisme","Modernism broke with tradition."],["Fiche 11","Architecture & design","heritage","patrimoine","The building is a listed heritage site."],["Fiche 11","Architecture & design","renovation","rénovation","The renovation preserved original features."],["Fiche 11","Architecture & design","restoration","restauration","Stone restoration required skilled craftsmen."],["Fiche 11","Architecture & design","adaptive reuse","réhabilitation / reconversion","Adaptive reuse transforms old buildings."],["Fiche 11","Architecture & design","extension","extension / agrandissement","A glass extension was added."],["Fiche 11","Architecture & design","programme (architectural)","programme (architectural)","The programme includes housing and retail."],["Fiche 11","Architecture & design","brief","cahier des charges / brief","The client brief was detailed."],["Fiche 11","Architecture & design","feasibility study","étude de faisabilité","A feasibility study preceded the design."],["Fiche 11","Architecture & design","planning permission","permis de construire","They are waiting for planning permission."],["Fiche 11","Architecture & design","building code","code de la construction","Comply with the building code."],["Fiche 11","Architecture & design","fire exit","sortie de secours","Fire exits must be clearly marked."],["Fiche 11","Architecture & design","accessibility","accessibilité","Accessibility is a legal requirement."],["Fiche 11","Architecture & design","universal design","conception universelle","Universal design includes everyone."],["Fiche 11","Architecture & design","energy efficiency","efficacité énergétique","Energy efficiency reduces bills."],["Fiche 11","Architecture & design","passive house","maison passive","A passive house needs minimal heating."],["Fiche 11","Architecture & design","HVAC","CVC (chauffage, ventilation, clim.)","The HVAC system was upgraded."],["Fiche 11","Architecture & design","natural ventilation","ventilation naturelle","Cross ventilation cools the space."],["Fiche 11","Architecture & design","bioclimatic design","conception bioclimatique","Bioclimatic design uses sunlight wisely."],["Fiche 11","Architecture & design","landscape","paysage / paysagisme","The landscape design frames the building."],["Fiche 11","Architecture & design","public space","espace public","Public space encourages social interaction."],["Fiche 11","Architecture & design","placemaking","fabrique du lieu / placemaking","Placemaking turns streets into places."],["Fiche 11","Architecture & design","mixed-use","mixité fonctionnelle","The building is mixed-use."],["Fiche 11","Architecture & design","density","densité","Urban density is increasing."],["Fiche 11","Architecture & design","urban fabric","tissu urbain","The project respects the urban fabric."],["Fiche 11","Architecture & design","streetscape","paysage urbain / rue","The streetscape is lively and varied."],["Fiche 11","Architecture & design","zoning","zonage","Zoning laws restrict building height."],["Fiche 11","Architecture & design","master plan","plan directeur / schéma directeur","The master plan guides development."],["Fiche 11","Architecture & design","3D model","maquette 3D","She rendered a 3D model of the project."],["Fiche 11","Architecture & design","rendering (visual)","rendu (visuel)","The rendering was presented to the client."],["Fiche 11","Architecture & design","mock-up","maquette / prototype à l'échelle","A mock-up was built to test the space."],["Fiche 11","Architecture & design","ArchiCAD","ArchiCAD (logiciel)","She models buildings using ArchiCAD."],["Fiche 12","Expressions idiomatiques & phrasal verbs","break the ice","briser la glace","He told a joke to break the ice."],["Fiche 12","Expressions idiomatiques & phrasal verbs","hit the nail on the head","mettre le doigt dessus","She hit the nail on the head."],["Fiche 12","Expressions idiomatiques & phrasal verbs","beat around the bush","tourner autour du pot","Stop beating around the bush."],["Fiche 12","Expressions idiomatiques & phrasal verbs","spill the beans","vendre la mèche","He spilled the beans about the party."],["Fiche 12","Expressions idiomatiques & phrasal verbs","under the weather","ne pas être dans son assiette","I'm feeling a bit under the weather."],["Fiche 12","Expressions idiomatiques & phrasal verbs","bite the bullet","prendre son courage à deux mains","Just bite the bullet and do it."],["Fiche 12","Expressions idiomatiques & phrasal verbs","the ball is in your court","la balle est dans votre camp","I've made my offer, the ball is in your court."],["Fiche 12","Expressions idiomatiques & phrasal verbs","hit the sack","aller se coucher","I need to hit the sack early tonight."],["Fiche 12","Expressions idiomatiques & phrasal verbs","once in a blue moon","une fois tous les 36 du mois","He visits once in a blue moon."],["Fiche 12","Expressions idiomatiques & phrasal verbs","it's a piece of cake","c'est du gâteau","The exam was a piece of cake."],["Fiche 12","Expressions idiomatiques & phrasal verbs","let the cat out of the bag","vendre la mèche","She let the cat out of the bag."],["Fiche 12","Expressions idiomatiques & phrasal verbs","kill two birds with one stone","faire d'une pierre deux coups","I'll kill two birds with one stone."],["Fiche 12","Expressions idiomatiques & phrasal verbs","the last straw","la goutte qui fait déborder le vase","That was the last straw."],["Fiche 12","Expressions idiomatiques & phrasal verbs","bite off more than you can chew","voir trop grand / avoir les yeux plus gros que le ventre","Don't bite off more than you can chew."],["Fiche 12","Expressions idiomatiques & phrasal verbs","cost an arm and a leg","coûter les yeux de la tête","The repair cost an arm and a leg."],["Fiche 12","Expressions idiomatiques & phrasal verbs","break a leg","bonne chance !","Break a leg at your audition!"],["Fiche 12","Expressions idiomatiques & phrasal verbs","burn bridges","brûler ses ponts","Don't burn bridges in this industry."],["Fiche 12","Expressions idiomatiques & phrasal verbs","cut corners","faire des économies de bout de chandelle","Never cut corners on safety."],["Fiche 12","Expressions idiomatiques & phrasal verbs","the tip of the iceberg","la partie visible de l'iceberg","This is just the tip of the iceberg."],["Fiche 12","Expressions idiomatiques & phrasal verbs","miss the boat","rater le coche","He missed the boat on that deal."],["Fiche 12","Expressions idiomatiques & phrasal verbs","read between the lines","lire entre les lignes","You have to read between the lines."],["Fiche 12","Expressions idiomatiques & phrasal verbs","get out of hand","dépasser les bornes / partir en vrille","The situation got out of hand."],["Fiche 12","Expressions idiomatiques & phrasal verbs","give someone the cold shoulder","snober quelqu'un","She gave him the cold shoulder."],["Fiche 12","Expressions idiomatiques & phrasal verbs","go back to the drawing board","repartir de zéro","We failed, so it's back to the drawing board."],["Fiche 12","Expressions idiomatiques & phrasal verbs","keep someone in the loop","tenir quelqu'un informé","Keep me in the loop, please."],["Fiche 12","Expressions idiomatiques & phrasal verbs","pull someone's leg","faire marcher quelqu'un","Are you pulling my leg?"],["Fiche 12","Expressions idiomatiques & phrasal verbs","see eye to eye","être du même avis","We don't always see eye to eye."],["Fiche 12","Expressions idiomatiques & phrasal verbs","sit on the fence","rester neutre / ne pas prendre position","Stop sitting on the fence!"],["Fiche 12","Expressions idiomatiques & phrasal verbs","throw in the towel","jeter l'éponge","He finally threw in the towel."],["Fiche 12","Expressions idiomatiques & phrasal verbs","under the table","sous la table / de manière illicite","They paid him under the table."],["Fiche 12","Expressions idiomatiques & phrasal verbs","catch up","rattraper / se mettre à jour","Let's catch up over coffee."],["Fiche 12","Expressions idiomatiques & phrasal verbs","give up","abandonner","Don't give up on your dreams."],["Fiche 12","Expressions idiomatiques & phrasal verbs","look into","examiner / se renseigner sur","I'll look into this issue."],["Fiche 12","Expressions idiomatiques & phrasal verbs","run out of","être à court de / manquer de","We ran out of coffee."],["Fiche 12","Expressions idiomatiques & phrasal verbs","turn down","refuser / baisser (le son)","She turned down the job offer."],["Fiche 12","Expressions idiomatiques & phrasal verbs","put off","reporter / remettre à plus tard","Don't put off important tasks."],["Fiche 12","Expressions idiomatiques & phrasal verbs","bring up","mentionner / évoquer","He brought up the budget issue."],["Fiche 12","Expressions idiomatiques & phrasal verbs","come across","tomber sur / donner l'impression de","I came across an interesting article."],["Fiche 12","Expressions idiomatiques & phrasal verbs","get along with","bien s'entendre avec","She gets along well with everyone."],["Fiche 12","Expressions idiomatiques & phrasal verbs","go through","traverser / passer par","She went through a difficult period."],["Fiche 12","Expressions idiomatiques & phrasal verbs","look up to","admirer / respecter","He looks up to his mentor."],["Fiche 12","Expressions idiomatiques & phrasal verbs","make up","se réconcilier / inventer / se maquiller","They made up after the argument."],["Fiche 12","Expressions idiomatiques & phrasal verbs","take after","ressembler à (caractère)","She takes after her mother."],["Fiche 12","Expressions idiomatiques & phrasal verbs","work out","faire du sport / se résoudre / calculer","It all worked out in the end."],["Fiche 12","Expressions idiomatiques & phrasal verbs","figure out","comprendre / résoudre","I can't figure out this problem."],["Fiche 12","Expressions idiomatiques & phrasal verbs","deal with","faire face à / gérer","How do you deal with stress?"],["Fiche 12","Expressions idiomatiques & phrasal verbs","end up","finir par / se retrouver","We ended up staying until midnight."],["Fiche 12","Expressions idiomatiques & phrasal verbs","go ahead","y aller / procéder","Go ahead, I'm listening."],["Fiche 12","Expressions idiomatiques & phrasal verbs","fit in","s'intégrer","She struggled to fit in at first."],["Fiche 12","Expressions idiomatiques & phrasal verbs","set up","mettre en place / créer","He set up his own company."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : actually","en réalité (≠ actuellement)","Actually, I disagree with you."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : eventually","finalement (≠ éventuellement)","He eventually agreed to the plan."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : library","bibliothèque (≠ librairie)","She studies in the library."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : demand","exiger / réclamer (≠ demander poliment)","He demanded an apology."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : sympathetic","compatissant (≠ sympathique)","She was very sympathetic."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : sensible","raisonnable / sensé (≠ sensible = sensitive)","That's a sensible decision."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : assist","aider (≠ assister = attend)","Can you assist me with this?"],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : chance","hasard / probabilité (≠ luck = chance en fr)","There's a chance of rain."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : pretend","faire semblant (≠ prétendre = claim)","Stop pretending to be fine."],["Fiche 12","Expressions idiomatiques & phrasal verbs","faux ami : lecture","cours / conférence (≠ lecture = reading)","The lecture was fascinating."],["Fiche 12","Expressions idiomatiques & phrasal verbs","to be honest","honnêtement / franchement","To be honest, I'm not sure."],["Fiche 12","Expressions idiomatiques & phrasal verbs","so far so good","jusqu'ici tout va bien","The project? So far so good."],["Fiche 12","Expressions idiomatiques & phrasal verbs","no wonder","pas étonnant","No wonder she's exhausted."],["Fiche 12","Expressions idiomatiques & phrasal verbs","that said","cela dit / cela étant","That said, I see your point."],["Fiche 12","Expressions idiomatiques & phrasal verbs","on the other hand","d'un autre côté","On the other hand, it has risks."],["Fiche 12","Expressions idiomatiques & phrasal verbs","in the long run","à long terme","It will pay off in the long run."],["Fiche 12","Expressions idiomatiques & phrasal verbs","as a matter of fact","en fait / à vrai dire","As a matter of fact, I knew her."],["Fiche 12","Expressions idiomatiques & phrasal verbs","needless to say","inutile de dire / il va sans dire","Needless to say, we were shocked."],["Fiche 12","Expressions idiomatiques & phrasal verbs","for the time being","pour l'instant","For the time being, stay focused."],["Fiche 12","Expressions idiomatiques & phrasal verbs","with that in mind","en gardant cela à l'esprit","With that in mind, let's plan ahead."],["Fiche 12","Expressions idiomatiques & phrasal verbs","by the way","au fait / à propos","By the way, did you call her?"],["Fiche 12","Expressions idiomatiques & phrasal verbs","as far as I know","à ma connaissance","As far as I know, it's correct."],["Fiche 12","Expressions idiomatiques & phrasal verbs","easier said than done","plus facile à dire qu'à faire","Easier said than done."],["Fiche 12","Expressions idiomatiques & phrasal verbs","better late than never","mieux vaut tard que jamais","Better late than never!"],["Fiche 12","Expressions idiomatiques & phrasal verbs","the sooner the better","le plus tôt sera le mieux","Send it — the sooner the better."],["Fiche 12","Expressions idiomatiques & phrasal verbs","at the end of the day","en fin de compte","At the end of the day, it's your choice."],["Fiche 12","Expressions idiomatiques & phrasal verbs","bite the dust","mordre la poussière / échouer","The project bit the dust."],["Fiche 12","Expressions idiomatiques & phrasal verbs","a blessing in disguise","un bienfait déguisé","Losing that job was a blessing in disguise."],["Fiche 12","Expressions idiomatiques & phrasal verbs","the elephant in the room","le sujet que l'on évite","Let's address the elephant in the room."],["Fiche 12","Expressions idiomatiques & phrasal verbs","on the fence","indécis / neutre","I'm still on the fence about it."],["Fiche 12","Expressions idiomatiques & phrasal verbs","go the extra mile","faire un effort supplémentaire","She always goes the extra mile."],["Fiche 12","Expressions idiomatiques & phrasal verbs","cut to the chase","aller droit au but","Let's cut to the chase."],["Fiche 12","Expressions idiomatiques & phrasal verbs","take it with a grain of salt","prendre avec des pincettes","Take that review with a grain of salt."],["Fiche 12","Expressions idiomatiques & phrasal verbs","burning the midnight oil","travailler jusqu'à l'aube","She was burning the midnight oil."],["Fiche 12","Expressions idiomatiques & phrasal verbs","get the ball rolling","lancer le bal / démarrer","Let's get the ball rolling!"],["Fiche 12","Expressions idiomatiques & phrasal verbs","in a nutshell","en résumé / en bref","In a nutshell, we failed."]].map(r=>({fiche:r[0],theme:r[1],en:r[2],fr:r[3],ex:r[4]}));
 
+// ===================== PIXEL ART GUARDS =====================
+function drawGuard(canvas, state, mirrored) {
+  const ctx = canvas.getContext('2d');
+  const s = 4; // pixel size
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Mirror for right guard
+  if(mirrored){
+    ctx.save();
+    ctx.translate(canvas.width, 0);
+    ctx.scale(-1, 1);
+  }
+
+  const D = (x,y,c) => { ctx.fillStyle=c; ctx.fillRect(x*s, y*s, s, s); };
+  const R = (x1,y1,x2,y2,c) => { ctx.fillStyle=c; ctx.fillRect(x1*s,y1*s,(x2-x1+1)*s,(y2-y1+1)*s); };
+
+  // COLORS
+  const BLK='#0a0808', BLK2='#181010', BLK3='#221818';   // bearskin hat
+  const RED='#b80c22', RED2='#9a0818', RED3='#d01828';    // tunic
+  const SKIN='#d4b090', SKIN2='#c4a080', SKIN3='#e0c0a0'; // skin
+  const GOLD='#d4a030', GOLD2='#f0c040', GOLD3='#b88020'; // gold
+  const PANT='#0a0a10', PANT2='#141420';                  // trousers
+  const SHOE='#060608', SHOE2='#0e0e14';                  // shoes
+  const EYE='#1a0808', WHITE='#f8f4f0';
+  const RIFLE='#3a2a10', RIFLE2='#5a4a20';
+  const MOUTH_N='#8a5030', MOUTH_H='#c05030', MOUTH_S='#5a2010';
+  const BADGE_R='#c8102e', BADGE_G='#d4a843';
+  const STRAP='#e0d8c0';
+
+  // ===== RIFLE (left side) =====
+  for(let y=2;y<=38;y++) D(2,y,y%3===0?RIFLE2:RIFLE);
+  // Barrel tip
+  D(1,2,RIFLE2); D(3,2,RIFLE2); D(2,1,RIFLE2);
+  // Stock detail
+  D(3,30,RIFLE2); D(4,31,RIFLE2); D(4,32,RIFLE);
+  // Bolt
+  D(3,20,GOLD3); D(4,20,GOLD3);
+  // Muzzle
+  R(1,3,3,4,GOLD3);
+
+  // ===== BEARSKIN HAT (tall, detailed) =====
+  // Main body - very tall (rows 1-16)
+  R(7,1,18,16,BLK);
+  // Fur texture
+  for(let y=1;y<=15;y+=2) { D(8,y,BLK2); D(12,y,BLK2); D(16,y,BLK2); }
+  for(let y=2;y<=14;y+=2) { D(10,y,BLK3); D(14,y,BLK3); D(18,y,BLK3); }
+  // Hat shape - slightly wider at top
+  D(6,2,BLK); D(6,3,BLK); D(19,2,BLK); D(19,3,BLK);
+  D(5,4,BLK); D(20,4,BLK); D(5,5,BLK); D(20,5,BLK);
+  // Hat crown (slightly narrower)
+  D(7,1,BLK2); D(8,0,BLK2); D(9,0,BLK); D(10,0,BLK); D(11,0,BLK);
+  D(12,0,BLK); D(13,0,BLK); D(14,0,BLK); D(15,0,BLK); D(16,0,BLK2); D(17,1,BLK2);
+  // Hat brim band
+  R(6,16,19,17,BLK2);
+  D(5,16,BLK2); D(5,17,BLK2); D(20,16,BLK2); D(20,17,BLK2);
+  // Gold chin strap
+  D(7,18,GOLD3); D(8,19,GOLD3); D(9,19,GOLD3); D(10,19,GOLD3);
+  D(11,19,GOLD3); D(12,19,GOLD3); D(13,19,GOLD3); D(14,19,GOLD3);
+  D(15,19,GOLD3); D(16,18,GOLD3);
+  // BADGE on hat
+  D(11,6,BADGE_R); D(12,6,BADGE_R); D(13,6,BADGE_R);
+  D(10,7,BADGE_R); D(11,7,BADGE_G); D(12,7,BADGE_G); D(13,7,BADGE_G); D(14,7,BADGE_R);
+  D(10,8,BADGE_R); D(11,8,BADGE_G); D(12,8,BADGE_R); D(13,8,BADGE_G); D(14,8,BADGE_R);
+  D(10,9,BADGE_R); D(11,9,BADGE_G); D(12,9,BADGE_G); D(13,9,BADGE_G); D(14,9,BADGE_R);
+  D(11,10,BADGE_R); D(12,10,BADGE_R); D(13,10,BADGE_R);
+
+  // ===== FACE =====
+  R(8,18,17,27,SKIN);
+  D(7,19,SKIN); D(7,20,SKIN); D(7,21,SKIN); D(7,22,SKIN); D(7,23,SKIN); D(7,24,SKIN);
+  D(18,19,SKIN); D(18,20,SKIN); D(18,21,SKIN); D(18,22,SKIN); D(18,23,SKIN); D(18,24,SKIN);
+  // Ears
+  D(6,21,SKIN2); D(5,21,SKIN2); D(5,22,SKIN2); D(6,22,SKIN2); D(6,23,SKIN2);
+  D(19,21,SKIN2); D(20,21,SKIN2); D(20,22,SKIN2); D(19,22,SKIN2); D(19,23,SKIN2);
+  // Chin
+  D(9,27,SKIN); D(10,27,SKIN); D(11,27,SKIN); D(12,27,SKIN); D(13,27,SKIN);
+  D(14,27,SKIN); D(15,27,SKIN); D(16,27,SKIN);
+  D(10,28,SKIN); D(11,28,SKIN); D(12,28,SKIN); D(13,28,SKIN); D(14,28,SKIN);
+  // Eyebrows
+  D(9,19,BLK2); D(10,19,BLK2); D(11,19,BLK2);
+  D(14,19,BLK2); D(15,19,BLK2); D(16,19,BLK2);
+  // Eyes - white + iris + highlight
+  D(9,21,WHITE); D(10,21,WHITE); D(11,21,WHITE);
+  D(14,21,WHITE); D(15,21,WHITE); D(16,21,WHITE);
+  const eyeY = state==='sad' ? 22 : 21;
+  D(10,eyeY,EYE); D(15,eyeY,EYE);
+  D(9,eyeY,SKIN2); D(11,eyeY,SKIN2); D(14,eyeY,SKIN2); D(16,eyeY,SKIN2);
+  D(9,eyeY-1,WHITE+'88'); D(14,eyeY-1,WHITE+'88'); // shine
+  // Nose
+  D(12,23,SKIN2); D(13,23,SKIN2);
+  D(11,24,SKIN2); D(14,24,SKIN2);
+  // MOUTH
+  if(state==='happy'){
+    D(10,26,MOUTH_H); D(11,26,MOUTH_H); D(12,26,MOUTH_H); D(13,26,MOUTH_H); D(14,26,MOUTH_H); D(15,26,MOUTH_H);
+    D(9,25,MOUTH_H); D(16,25,MOUTH_H);
+    D(11,26,WHITE); D(12,26,WHITE); D(13,26,WHITE); D(14,26,WHITE); // teeth
+  } else if(state==='sad'){
+    D(10,27,MOUTH_S); D(11,27,MOUTH_S); D(12,27,MOUTH_S); D(13,27,MOUTH_S); D(14,27,MOUTH_S); D(15,27,MOUTH_S);
+    D(9,26,MOUTH_S); D(16,26,MOUTH_S);
+    D(9,27,SKIN2); D(16,27,SKIN2); // droopy corners
+  } else {
+    D(10,26,MOUTH_N); D(11,26,MOUTH_N); D(12,26,MOUTH_N); D(13,26,MOUTH_N); D(14,26,MOUTH_N);
+  }
+
+  // ===== GOLD COLLAR =====
+  R(9,28,16,29,GOLD);
+  D(11,28,GOLD2); D(12,28,GOLD2); D(13,28,GOLD2);
+  D(8,28,GOLD3); D(17,28,GOLD3);
+
+  // ===== RED TUNIC (detailed) =====
+  // Main body
+  R(7,29,18,43,RED);
+  // Shading sides
+  for(let y=29;y<=43;y++){D(7,y,RED2); D(18,y,RED2);}
+  // Center seam
+  for(let y=30;y<=43;y++) D(12,y,RED2);
+  // Buttons (gold)
+  D(12,31,GOLD); D(12,34,GOLD); D(12,37,GOLD); D(12,40,GOLD); D(12,43,GOLD);
+  for(let b of [31,34,37,40,43]) { D(11,b,GOLD2); } // highlight
+  // EPAULETTES
+  R(5,29,8,31,GOLD); R(17,29,20,31,GOLD);
+  D(4,29,GOLD3); D(21,29,GOLD3);
+  // Epaulette fringe
+  for(let i=0;i<=3;i++){
+    D(5+i,32,GOLD3); D(5+i,33,GOLD);
+  }
+  for(let i=0;i<=3;i++){
+    D(17+i,32,GOLD3); D(17+i,33,GOLD);
+  }
+  // Cross belt (Sam Browne)
+  D(7,30,STRAP); D(8,31,STRAP); D(9,32,STRAP); D(10,33,STRAP);
+  D(11,34,STRAP); D(12,35,STRAP); D(13,36,STRAP); D(14,37,STRAP);
+  D(15,38,STRAP); D(16,39,STRAP); D(17,40,STRAP);
+  // Belt buckle
+  D(12,35,GOLD2);
+
+  // ===== LEFT ARM =====
+  R(4,30,7,40,RED);
+  R(4,40,7,42,GOLD); // cuff
+  // Left hand
+  R(4,42,7,44,SKIN);
+  D(3,43,SKIN); D(3,44,SKIN); // thumb visible
+  // Fingers
+  D(4,45,SKIN2); D(5,45,SKIN2); D(6,45,SKIN2);
+
+  // ===== RIGHT ARM =====
+  R(18,30,21,40,RED);
+  R(18,40,21,42,GOLD); // cuff
+
+  // THUMB UP
+  if(state==='happy'){
+    // Fist
+    R(18,42,21,45,SKIN);
+    // Thumb raised
+    D(21,40,SKIN); D(21,39,SKIN); D(21,38,SKIN); D(22,38,SKIN);
+    D(21,37,SKIN); D(22,37,SKIN); D(22,39,SKIN);
+    // Golden glow on thumb
+    D(22,37,GOLD2); D(21,37,GOLD2);
+    // Nail
+    D(22,36,WHITE);
+  } else if(state==='sad'){
+    // Arms raised to head
+    D(21,39,RED); D(21,38,RED); D(20,37,RED); D(19,36,RED);
+    D(18,35,SKIN); D(17,34,SKIN); D(16,33,SKIN); D(15,32,SKIN);
+    D(4,39,RED); D(4,38,RED); D(5,37,RED); D(6,36,RED);
+    D(7,35,SKIN); D(8,34,SKIN); D(9,33,SKIN); D(10,32,SKIN);
+    // Hands on hat area
+    D(9,31,SKIN); D(10,30,SKIN); D(11,30,SKIN);
+    D(15,31,SKIN); D(14,30,SKIN); D(13,30,SKIN);
+  } else {
+    R(18,42,21,45,SKIN);
+    D(22,43,SKIN); D(22,44,SKIN); // relaxed hand
+    D(18,45,SKIN2); D(19,45,SKIN2); D(20,45,SKIN2);
+  }
+
+  // ===== BLACK TROUSERS =====
+  R(9,44,13,46,PANT); R(13,44,17,46,PANT);
+  // Left trouser leg
+  R(9,47,13,82,PANT);
+  D(8,47,PANT2); D(14,47,PANT2);
+  // Right trouser leg
+  R(13,47,17,82,PANT);
+  D(12,47,PANT2); D(18,47,PANT2);
+  // Red stripe
+  D(11,47,RED2); for(let y=48;y<=82;y++) D(11,y,'#c8102e88');
+  D(15,47,RED2); for(let y=48;y<=82;y++) D(15,y,'#c8102e88');
+  // Crease
+  for(let y=47;y<=82;y+=4){ D(11,y,PANT2); D(15,y,PANT2); }
+
+  // ===== SHOES =====
+  R(7,82,14,84,SHOE);
+  D(6,82,SHOE); D(6,83,SHOE); D(15,82,SHOE);
+  R(7,84,13,85,SHOE2); // sole
+  R(13,82,20,84,SHOE);
+  D(12,82,SHOE); D(21,82,SHOE); D(21,83,SHOE);
+  R(13,84,19,85,SHOE2);
+  // Shine
+  D(8,82,BLK3); D(9,82,BLK3); D(14,82,BLK3); D(15,82,BLK3);
+  D(8,83,SHOE); // highlight left
+  D(14,83,SHOE); // highlight right
+
+  if(mirrored) ctx.restore();
+}
+
+function initGuards(){
+  drawGuard(document.getElementById('guard-left'),'idle',false);
+  drawGuard(document.getElementById('guard-right'),'idle',true);
+}
+
+function animGuards(correct){
+  const gl=document.getElementById('guard-left');
+  const gr=document.getElementById('guard-right');
+  const badge=document.getElementById('combo-badge');
+  gl.classList.remove('happy','sad');gr.classList.remove('happy','sad');
+  void gl.offsetWidth;
+  const state=correct?'happy':'sad';
+  drawGuard(gl,state,false);
+  drawGuard(gr,state,true);
+  gl.classList.add(state);gr.classList.add(state);
+  if(correct){
+    if(defiStreak>=10)badge.textContent='🌹🌹🌹';
+    else if(defiStreak>=5)badge.textContent='🌹🌹';
+    else badge.textContent='🌹';
+    setTimeout(()=>{drawGuard(gl,'idle',false);drawGuard(gr,'idle',true);gl.classList.remove('happy');gr.classList.remove('happy');},700);
+  } else {
+    badge.textContent='💀';
+  }
+}
+
+// ===================== UTILS =====================
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -605,248 +502,60 @@ function showPage(id){
   document.getElementById(id).classList.add('active');
   const m={p1:'nb1',p2:'nb2',p3:'nb3'};
   document.getElementById(m[id]).classList.add('active');
+  if(id==='p2'&&!guardsInited){setTimeout(initGuards,50);guardsInited=true;}
   if(id==='p3')revRender();
 }
+let guardsInited=false;
 
-// PAGE 1
+// ===================== PAGE 1 =====================
 let p1deck=[],p1idx=0,p1flipped=false,p1scores={};
 const sd=document.getElementById('sd'),st=document.getElementById('st');
 const fiches=['Toutes les fiches',...new Set(ALL.map(d=>d.fiche))];
 fiches.forEach(f=>{const o=document.createElement('option');o.value=f;o.textContent=f+(f!=='Toutes les fiches'?' — '+ALL.find(d=>d.fiche===f).theme:'');sd.appendChild(o);});
 sd.addEventListener('change',()=>{p1updateThemes();p1build();});
 st.addEventListener('change',p1build);
-
-function p1updateThemes(){
-  const fv=sd.value;
-  const base=fv==='Toutes les fiches'?ALL:ALL.filter(d=>d.fiche===fv);
-  const themes=['Tous les thèmes',...new Set(base.map(d=>d.theme))];
-  st.innerHTML='';themes.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;st.appendChild(o);});
-}
+function p1updateThemes(){const fv=sd.value;const base=fv==='Toutes les fiches'?ALL:ALL.filter(d=>d.fiche===fv);const themes=['Tous les thèmes',...new Set(base.map(d=>d.theme))];st.innerHTML='';themes.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;st.appendChild(o);});}
 p1updateThemes();
-
-function p1build(){
-  const fv=sd.value,tv=st.value,f=document.getElementById('sf').value;
-  let base=fv==='Toutes les fiches'?ALL:ALL.filter(d=>d.fiche===fv);
-  if(tv&&tv!=='Tous les thèmes')base=base.filter(d=>d.theme===tv);
-  if(f==='todo')base=base.filter(d=>p1scores[d.en+d.fr]!==true);
-  if(f==='ok')base=base.filter(d=>p1scores[d.en+d.fr]===true);
-  p1deck=[...base];p1idx=0;p1flipped=false;p1updateStats();p1render();
-}
+function p1build(){const fv=sd.value,tv=st.value,f=document.getElementById('sf').value;let base=fv==='Toutes les fiches'?ALL:ALL.filter(d=>d.fiche===fv);if(tv&&tv!=='Tous les thèmes')base=base.filter(d=>d.theme===tv);if(f==='todo')base=base.filter(d=>p1scores[d.en+d.fr]!==true);if(f==='ok')base=base.filter(d=>p1scores[d.en+d.fr]===true);p1deck=[...base];p1idx=0;p1flipped=false;p1updateStats();p1render();}
 function p1shuffle(){for(let i=p1deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[p1deck[i],p1deck[j]]=[p1deck[j],p1deck[i]];}p1idx=0;p1flipped=false;p1render();}
 function p1reset(){if(!confirm('Réinitialiser ?'))return;p1scores={};document.getElementById('si').textContent='';p1build();toast('Réinitialisé.');}
-
-function p1render(){
-  if(!p1deck.length){
-    document.getElementById('fw').textContent='Aucune carte.';
-    ['fd','ft','fh'].forEach(id=>document.getElementById(id).textContent='');
-    document.getElementById('fa').style.display='none';document.getElementById('vr').style.display='none';
-    document.getElementById('ni').textContent='0/0';document.getElementById('pb').style.width='0%';return;
-  }
-  const c=p1deck[p1idx];
-  const mv=document.getElementById('sm').value;
-  const cm=mv==='rand'?(Math.random()>.5?'en':'fr'):mv;
-  const q=cm==='en'?c.en:c.fr;
-  const a=cm==='en'?c.fr:c.en;
-  document.getElementById('fd').textContent=c.fiche;
-  document.getElementById('ft').textContent=c.theme;
-  document.getElementById('fw').textContent=q;
-  document.getElementById('fh').textContent=p1flipped?'':'— toucher pour retourner —';
-  document.getElementById('fa').style.display=p1flipped?'block':'none';
-  document.getElementById('fc-fr').textContent=a;
-  document.getElementById('fc-ex').textContent=c.ex;
-  document.getElementById('ni').textContent=(p1idx+1)+'/'+p1deck.length;
-  document.getElementById('vr').style.display=p1flipped?'flex':'none';
-  document.getElementById('pb').style.width=Math.round(((p1idx+1)/p1deck.length)*100)+'%';
-}
+function p1render(){if(!p1deck.length){document.getElementById('fw').textContent='Aucune carte.';['fd','ft','fh'].forEach(id=>document.getElementById(id).textContent='');document.getElementById('fa').style.display='none';document.getElementById('vr').style.display='none';document.getElementById('ni').textContent='0/0';document.getElementById('pb').style.width='0%';return;}const c=p1deck[p1idx];const mv=document.getElementById('sm').value;const cm=mv==='rand'?(Math.random()>.5?'en':'fr'):mv;const q=cm==='en'?c.en:c.fr;const a=cm==='en'?c.fr:c.en;document.getElementById('fd').textContent=c.fiche;document.getElementById('ft').textContent=c.theme;document.getElementById('fw').textContent=q;document.getElementById('fh').textContent=p1flipped?'':'— toucher pour retourner —';document.getElementById('fa').style.display=p1flipped?'block':'none';document.getElementById('fc-fr').textContent=a;document.getElementById('fc-ex').textContent=c.ex;document.getElementById('ni').textContent=(p1idx+1)+'/'+p1deck.length;document.getElementById('vr').style.display=p1flipped?'flex':'none';document.getElementById('pb').style.width=Math.round(((p1idx+1)/p1deck.length)*100)+'%';}
 function p1flip(){if(!p1deck.length)return;p1flipped=!p1flipped;p1render();}
 function p1go(dir){if(!p1deck.length)return;p1idx=(p1idx+dir+p1deck.length)%p1deck.length;p1flipped=false;p1render();}
-function p1vote(ok){
-  if(!p1deck.length)return;
-  p1scores[p1deck[p1idx].en+p1deck[p1idx].fr]=ok;p1updateStats();
-  if(ok&&document.getElementById('sf').value==='todo'){p1deck.splice(p1idx,1);if(p1idx>=p1deck.length)p1idx=0;p1flipped=false;p1render();}
-  else p1go(1);
-}
-function p1updateStats(){
-  const fv=sd.value,tv=st.value;
-  let base=fv==='Toutes les fiches'?ALL:ALL.filter(d=>d.fiche===fv);
-  if(tv&&tv!=='Tous les thèmes')base=base.filter(d=>d.theme===tv);
-  const ok=base.filter(d=>p1scores[d.en+d.fr]===true).length;
-  const ko=base.filter(d=>p1scores[d.en+d.fr]===false).length;
-  document.getElementById('s-t').textContent=base.length;
-  document.getElementById('s-o').textContent=ok;
-  document.getElementById('s-k').textContent=ko;
-  const r=ok+ko;document.getElementById('s-p').textContent=r>0?Math.round(ok/r*100)+'%':'—';
-}
-function p1save(){
-  const ok=Object.values(p1scores).filter(v=>v===true).length;
-  const ko=Object.values(p1scores).filter(v=>v===false).length;
-  const blob=new Blob([JSON.stringify({version:2,prenom:PRENOM,date:new Date().toISOString(),scores:p1scores,defiRecord,summary:{total:ALL.length,sus:ok,arevoir:ko}},null,2)],{type:'application/json'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
-  a.download='anglais_'+PRENOM.toLowerCase().replace(/é/g,'e')+'_'+new Date().toISOString().slice(0,10)+'.json';
-  a.click();URL.revokeObjectURL(a.href);toast('Sauvegardé !');
-}
-function p1load(event){
-  const file=event.target.files[0];if(!file)return;
-  const reader=new FileReader();
-  reader.onload=e=>{
-    try{const p=JSON.parse(e.target.result);if(!p.scores)throw new Error();
-    p1scores=p.scores;
-    if(p.defiRecord!==undefined){defiRecord=p.defiRecord;document.getElementById('record-num').textContent=defiRecord;}
-    const d=p.date?new Date(p.date).toLocaleDateString('fr-FR'):'?';
-    document.getElementById('si').textContent=d+' · '+p.summary.sus+' sus';
-    p1build();toast('Chargé !');}catch{toast('Fichier invalide.');}
-  };reader.readAsText(file);event.target.value='';
-}
+function p1vote(ok){if(!p1deck.length)return;p1scores[p1deck[p1idx].en+p1deck[p1idx].fr]=ok;p1updateStats();if(ok&&document.getElementById('sf').value==='todo'){p1deck.splice(p1idx,1);if(p1idx>=p1deck.length)p1idx=0;p1flipped=false;p1render();}else p1go(1);}
+function p1updateStats(){const fv=sd.value,tv=st.value;let base=fv==='Toutes les fiches'?ALL:ALL.filter(d=>d.fiche===fv);if(tv&&tv!=='Tous les thèmes')base=base.filter(d=>d.theme===tv);const ok=base.filter(d=>p1scores[d.en+d.fr]===true).length;const ko=base.filter(d=>p1scores[d.en+d.fr]===false).length;document.getElementById('s-t').textContent=base.length;document.getElementById('s-o').textContent=ok;document.getElementById('s-k').textContent=ko;const r=ok+ko;document.getElementById('s-p').textContent=r>0?Math.round(ok/r*100)+'%':'—';}
+function p1save(){const ok=Object.values(p1scores).filter(v=>v===true).length;const ko=Object.values(p1scores).filter(v=>v===false).length;const blob=new Blob([JSON.stringify({version:2,prenom:PRENOM,date:new Date().toISOString(),scores:p1scores,defiRecord,summary:{total:ALL.length,sus:ok,arevoir:ko}},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='anglais_'+PRENOM.toLowerCase().replace(/é/g,'e')+'_'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);toast('Sauvegardé !');}
+function p1load(event){const file=event.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=e=>{try{const p=JSON.parse(e.target.result);if(!p.scores)throw new Error();p1scores=p.scores;if(p.defiRecord!==undefined){defiRecord=p.defiRecord;document.getElementById('record-num').textContent=defiRecord;}const d=p.date?new Date(p.date).toLocaleDateString('fr-FR'):'?';document.getElementById('si').textContent=d+' · '+p.summary.sus+' sus';p1build();toast('Chargé !');}catch{toast('Fichier invalide.');}};reader.readAsText(file);event.target.value='';}
 p1build();
 
-// PAGE 2 — DÉFI
+// ===================== PAGE 2 =====================
 let defiStreak=0,defiRecord=0,defiState='idle',defiCurrent=null,defiCorrectIdx=0,defiShuffled=[];
-
-function animGuard(correct){
-  const gl=document.getElementById('guard-left');
-  const gr=document.getElementById('guard-right');
-  const ml=document.getElementById('mouth-l');
-  const mr=document.getElementById('mouth-r');
-  const badge=document.getElementById('defi-combo-badge');
-  gl.classList.remove('happy','sad');gr.classList.remove('happy','sad');
-  void gl.offsetWidth;
-
-  // Show/hide thumb up and hands on head
-  const thumbL=document.getElementById('guard-left-thumbup');
-  const thumbR=document.getElementById('guard-right-thumbup');
-  const handsL=document.getElementById('guard-left-handsup');
-  const handsR=document.getElementById('guard-right-handsup');
-
-  if(correct){
-    gl.classList.add('happy');gr.classList.add('happy');
-    if(ml){ml.setAttribute('d','M39 82 Q45 88 51 82');}
-    if(mr){mr.setAttribute('d','M39 82 Q45 88 51 82');}
-    if(thumbL)thumbL.setAttribute('display','');
-    if(thumbR)thumbR.setAttribute('display','');
-    if(handsL)handsL.setAttribute('display','none');
-    if(handsR)handsR.setAttribute('display','none');
-    if(defiStreak>=10)badge.textContent='🌹🌹🌹';
-    else if(defiStreak>=5)badge.textContent='🌹🌹';
-    else badge.textContent='🌹';
-  }else{
-    gl.classList.add('sad');gr.classList.add('sad');
-    if(ml){ml.setAttribute('d','M39 86 Q45 82 51 86');}
-    if(mr){mr.setAttribute('d','M39 86 Q45 82 51 86');}
-    if(thumbL)thumbL.setAttribute('display','none');
-    if(thumbR)thumbR.setAttribute('display','none');
-    if(handsL)handsL.setAttribute('display','');
-    if(handsR)handsR.setAttribute('display','');
-    badge.textContent='💀';
-  }
-}
-
-function resetGuards(){
-  const ml=document.getElementById('mouth-l'),mr=document.getElementById('mouth-r');
-  if(ml)ml.setAttribute('d','M39 82 Q45 86 51 82');
-  if(mr)mr.setAttribute('d','M39 82 Q45 86 51 82');
-  const thumbL=document.getElementById('guard-left-thumbup');
-  const thumbR=document.getElementById('guard-right-thumbup');
-  const handsL=document.getElementById('guard-left-handsup');
-  const handsR=document.getElementById('guard-right-handsup');
-  if(thumbL)thumbL.setAttribute('display','');
-  if(thumbR)thumbR.setAttribute('display','');
-  if(handsL)handsL.setAttribute('display','none');
-  if(handsR)handsR.setAttribute('display','none');
-}
-
 function defiStart(){
   defiStreak=0;document.getElementById('streak-num').textContent='0';
-  defiShuffled=[...ALL].sort(()=>Math.random()-.5);
-  defiState='question';
+  defiShuffled=[...ALL].sort(()=>Math.random()-.5);defiState='question';
   document.getElementById('btn-start').style.display='none';
   document.getElementById('btn-restart').style.display='none';
   document.getElementById('btn-next').style.display='none';
-  document.getElementById('defi-combo-badge').textContent='';
-  document.getElementById('guard-left').classList.remove('happy','sad');
-  document.getElementById('guard-right').classList.remove('happy','sad');
-  resetGuards();
+  document.getElementById('combo-badge').textContent='';
+  if(!guardsInited){initGuards();guardsInited=true;}
+  else{drawGuard(document.getElementById('guard-left'),'idle',false);drawGuard(document.getElementById('guard-right'),'idle',true);}
   defiShowNext();
 }
-
-function defiShowNext(){
-  if(!defiShuffled.length)defiShuffled=[...ALL].sort(()=>Math.random()-.5);
-  defiCurrent=defiShuffled.pop();
-  const correct=defiCurrent.fr;
-  const others=ALL.filter(c=>c.fr!==defiCurrent.fr).sort(()=>Math.random()-.5).slice(0,3);
-  const allChoices=[correct,...others.map(c=>c.fr)].sort(()=>Math.random()-.5);
-  defiCorrectIdx=allChoices.indexOf(correct);
-  document.getElementById('dq-fiche').textContent=defiCurrent.fiche;
-  document.getElementById('dq-theme').textContent=defiCurrent.theme;
-  document.getElementById('dq-text').textContent=defiCurrent.en;
-  document.getElementById('dq-reveal').style.display='none';
-  for(let i=0;i<4;i++){const btn=document.getElementById('ch'+i);btn.textContent=allChoices[i];btn.className='choice-btn';btn.disabled=false;}
-  document.getElementById('defi-card').style.display='flex';
-  document.getElementById('defi-choices').style.display='grid';
-  document.getElementById('defi-card').className='defi-card';
-  document.getElementById('btn-next').style.display='none';
-}
-
-function defiAnswer(idx){
-  if(defiState!=='question')return;
-  defiState='answered';
-  const correct=(idx===defiCorrectIdx);
-  for(let i=0;i<4;i++){const btn=document.getElementById('ch'+i);btn.disabled=true;if(i===defiCorrectIdx)btn.className='choice-btn reveal-correct';else if(i===idx&&!correct)btn.className='choice-btn wrong-choice';}
-  if(correct){
-    defiStreak++;document.getElementById('streak-num').textContent=defiStreak;
-    document.getElementById('defi-card').classList.add('correct');
-    if(defiStreak>defiRecord){defiRecord=defiStreak;document.getElementById('record-num').textContent=defiRecord;}
-    animGuard(true);
-    document.getElementById('dq-reveal').textContent=defiCurrent.ex;
-    document.getElementById('dq-reveal').style.display='block';
-    document.getElementById('btn-next').style.display='block';
-    defiState='question';
-  }else{
-    document.getElementById('defi-card').classList.add('wrong');
-    animGuard(false);
-    document.getElementById('dq-reveal').textContent='✗ '+defiCurrent.fr+' — '+defiCurrent.ex;
-    document.getElementById('dq-reveal').style.display='block';
-    defiState='gameover';
-    setTimeout(()=>{document.getElementById('btn-restart').style.display='block';},700);
-  }
-}
+function defiShowNext(){if(!defiShuffled.length)defiShuffled=[...ALL].sort(()=>Math.random()-.5);defiCurrent=defiShuffled.pop();const correct=defiCurrent.fr;const others=ALL.filter(c=>c.fr!==defiCurrent.fr).sort(()=>Math.random()-.5).slice(0,3);const allChoices=[correct,...others.map(c=>c.fr)].sort(()=>Math.random()-.5);defiCorrectIdx=allChoices.indexOf(correct);document.getElementById('dq-fiche').textContent=defiCurrent.fiche;document.getElementById('dq-theme').textContent=defiCurrent.theme;document.getElementById('dq-text').textContent=defiCurrent.en;document.getElementById('dq-reveal').style.display='none';for(let i=0;i<4;i++){const btn=document.getElementById('ch'+i);btn.textContent=allChoices[i];btn.className='choice-btn';btn.disabled=false;}document.getElementById('defi-card').style.display='flex';document.getElementById('defi-choices').style.display='grid';document.getElementById('defi-card').className='defi-card';document.getElementById('btn-next').style.display='none';}
+function defiAnswer(idx){if(defiState!=='question')return;defiState='answered';const correct=(idx===defiCorrectIdx);for(let i=0;i<4;i++){const btn=document.getElementById('ch'+i);btn.disabled=true;if(i===defiCorrectIdx)btn.className='choice-btn reveal-correct';else if(i===idx&&!correct)btn.className='choice-btn wrong-choice';}if(correct){defiStreak++;document.getElementById('streak-num').textContent=defiStreak;document.getElementById('defi-card').classList.add('correct');if(defiStreak>defiRecord){defiRecord=defiStreak;document.getElementById('record-num').textContent=defiRecord;}animGuards(true);document.getElementById('dq-reveal').textContent=defiCurrent.ex;document.getElementById('dq-reveal').style.display='block';document.getElementById('btn-next').style.display='block';defiState='question';}else{document.getElementById('defi-card').classList.add('wrong');animGuards(false);document.getElementById('dq-reveal').textContent='✗ '+defiCurrent.fr+' — '+defiCurrent.ex;document.getElementById('dq-reveal').style.display='block';defiState='gameover';setTimeout(()=>{document.getElementById('btn-restart').style.display='block';},700);}}
 function defiNext(){if(defiState!=='question')return;defiShowNext();}
 
-// PAGE 3
+// ===================== PAGE 3 =====================
 let revActiveFiche='all',revSearch='',revMode='all';
-function revInit(){
-  const fiches2=['Toutes',...new Set(ALL.map(d=>d.fiche))];
-  const c=document.getElementById('rev-filters');c.innerHTML='';
-  fiches2.forEach(f=>{
-    const btn=document.createElement('button');
-    btn.className='rev-filter-btn'+(f==='Toutes'?' active':'');
-    btn.textContent=f;
-    btn.onclick=()=>{revActiveFiche=f==='Toutes'?'all':f;document.querySelectorAll('.rev-filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');revRender();};
-    c.appendChild(btn);
-  });
-}
+function revInit(){const fiches2=['Toutes',...new Set(ALL.map(d=>d.fiche))];const c=document.getElementById('rev-filters');c.innerHTML='';fiches2.forEach(f=>{const btn=document.createElement('button');btn.className='rev-filter-btn'+(f==='Toutes'?' active':'');btn.textContent=f;btn.onclick=()=>{revActiveFiche=f==='Toutes'?'all':f;document.querySelectorAll('.rev-filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');revRender();};c.appendChild(btn);});}
 revInit();
 function revFilter(){revSearch=document.getElementById('rev-search').value.toLowerCase();revRender();}
 function setRevMode(m){revMode=m;['all','en','fr','ex'].forEach(x=>document.getElementById('rm-'+x).classList.remove('active'));document.getElementById('rm-'+m).classList.add('active');revRender();}
-function revRender(){
-  let base=revActiveFiche==='all'?ALL:ALL.filter(d=>d.fiche===revActiveFiche);
-  if(revSearch){base=base.filter(c=>{if(revMode==='en')return c.en.toLowerCase().includes(revSearch);if(revMode==='fr')return c.fr.toLowerCase().includes(revSearch);if(revMode==='ex')return c.ex.toLowerCase().includes(revSearch);return c.en.toLowerCase().includes(revSearch)||c.fr.toLowerCase().includes(revSearch)||c.ex.toLowerCase().includes(revSearch);});}
-  document.getElementById('rev-count').textContent=base.length+' mot'+(base.length>1?'s':'');
-  const container=document.getElementById('rev-list');container.innerHTML='';
-  base.forEach(card=>{
-    const item=document.createElement('div');item.className='rev-item';
-    function hl(text){if(!revSearch)return text;const re=new RegExp("("+revSearch+")","gi");return text.replace(re,'<mark style="background:var(--gold);color:#0d0810;border-radius:2px;padding:0 1px">$1</mark>');}
-    item.innerHTML=`<div class="rev-item-header" onclick="this.parentElement.classList.toggle('open')">
-      <div class="rev-item-left">
-        <div class="rev-item-fiche">${card.fiche}</div>
-        <div class="rev-item-theme">${card.theme}</div>
-        <div class="rev-en">${hl(card.en)}</div>
-        <div class="rev-fr">${hl(card.fr)}</div>
-      </div><span class="rev-item-arrow">▶</span></div>
-      <div class="rev-item-body"><div class="rev-example"><span>Ex. : </span>${hl(card.ex)}</div></div>`;
-    container.appendChild(item);
-  });
-}
+function revRender(){let base=revActiveFiche==='all'?ALL:ALL.filter(d=>d.fiche===revActiveFiche);if(revSearch){base=base.filter(c=>{if(revMode==='en')return c.en.toLowerCase().includes(revSearch);if(revMode==='fr')return c.fr.toLowerCase().includes(revSearch);if(revMode==='ex')return c.ex.toLowerCase().includes(revSearch);return c.en.toLowerCase().includes(revSearch)||c.fr.toLowerCase().includes(revSearch)||c.ex.toLowerCase().includes(revSearch);});}document.getElementById('rev-count').textContent=base.length+' mot'+(base.length>1?'s':'');const container=document.getElementById('rev-list');container.innerHTML='';base.forEach(card=>{const item=document.createElement('div');item.className='rev-item';function hl(text){if(!revSearch)return text;const re=new RegExp("("+revSearch+")","gi");return text.replace(re,'<mark style="background:var(--gold);color:#1a0c12;border-radius:2px;padding:0 1px">$1</mark>');}item.innerHTML=`<div class="rev-item-header" onclick="this.parentElement.classList.toggle('open')"><div class="rev-item-left"><div class="rev-item-fiche">${card.fiche}</div><div class="rev-item-theme">${card.theme}</div><div class="rev-en">${hl(card.en)}</div><div class="rev-fr">${hl(card.fr)}</div></div><span class="rev-item-arrow">▶</span></div><div class="rev-item-body"><div class="rev-example"><span>Ex. : </span>${hl(card.ex)}</div></div>`;container.appendChild(item);});}
 revRender();
+
+// Init guards when visiting p2 tab
+document.getElementById('nb2').addEventListener('click',()=>{if(!guardsInited){setTimeout(initGuards,80);guardsInited=true;}});
 </script>
 </body>
 </html>
