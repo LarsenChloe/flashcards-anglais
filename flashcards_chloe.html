@@ -59,6 +59,8 @@ button:active { transform: scale(0.98); }
 .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: 58px; background: #fffafc; border-top: 1px solid #e8c8d4; display: flex; z-index: 100; }
 .bnav-btn { flex: 1; border: none; background: none; font-size: 13px; font-family: inherit; color: #999; cursor: pointer; font-weight: 400; }
 .bnav-btn.active { color: #9b1a2e; font-weight: 600; }
+.defi-fixed-btn { position: fixed; bottom: 58px; left: 0; right: 0; z-index: 90; padding: 10px 16px; background: #fdf0f4; border-top: 1px solid #e8c8d4; }
+.defi-fixed-btn button { width: 100%; padding: 14px; border-radius: 10px; font-size: 13px; font-family: inherit; cursor: pointer; }
 .toast { position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%); background: #9b1a2e; color: white; font-size: 13px; padding: 10px 20px; border-radius: 20px; opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 200; }
 .toast.show { opacity: 1; }
 </style>
@@ -198,9 +200,11 @@ button:active { transform: scale(0.98); }
     <div id="defi-feedback-tip" style="font-size:12px;color:#777;font-style:italic;margin-top:4px"></div>
   </div>
 </div>
-<button id="defi-next-btn" style="display:none;width:100%;padding:14px;border-radius:10px;font-size:13px;font-family:inherit;background:#9b1a2e;color:white;border:none;cursor:pointer;margin-top:8px" onclick="defiNext()">Suivant →</button>
-<button id="defi-restart-btn" style="display:none;width:100%;padding:14px;border-radius:10px;font-size:13px;font-family:inherit;background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;cursor:pointer;margin-top:8px" onclick="defiStart()">↺ Recommencer</button>
 <button id="defi-start-btn" style="width:100%;padding:14px;border-radius:10px;font-size:13px;font-family:inherit;background:#9b1a2e;color:white;border:none;cursor:pointer;margin-top:8px" onclick="defiStart()">Commencer le défi</button>
+<div id="defi-fixed-bar" class="defi-fixed-btn" style="display:none">
+  <button id="defi-next-btn" style="display:none;background:#9b1a2e;color:white;border:none;" onclick="defiNext()">Suivant →</button>
+  <button id="defi-restart-btn" style="display:none;background:#fef2f2;color:#991b1b;border:1px solid #fca5a5;" onclick="defiStart()">↺ Recommencer</button>
+</div>
 </div>
 <nav class="bottom-nav">
   <button class="bnav-btn active" id="bn-flash" onclick="showTab('flash')">Vocabulaire</button>
@@ -225,6 +229,7 @@ function showTab(tab) {
   document.getElementById('bn-flash').classList.toggle('active', tab === 'flash');
   document.getElementById('bn-ex').classList.toggle('active', tab === 'ex');
   document.getElementById('bn-defi').classList.toggle('active', tab === 'defi');
+  if (tab !== 'defi') document.getElementById('defi-fixed-bar').style.display = 'none';
   if (tab === 'ex' && !exInited) { exInit(); exInited = true; }
   if (tab === 'defi') { defiInitTab(); }
 }
@@ -517,6 +522,7 @@ function defiBuild() {
   document.getElementById('defi-start-btn').style.display = 'block';
   document.getElementById('defi-restart-btn').style.display = 'none';
   document.getElementById('defi-next-btn').style.display = 'none';
+  document.getElementById('defi-fixed-bar').style.display = 'none';
   document.getElementById('defi-feedback').style.display = 'none';
   document.getElementById('defi-choices').innerHTML = '';
   document.getElementById('defi-question').textContent = 'Prêt ? Lance le défi !';
@@ -527,6 +533,7 @@ function defiStart() {
   defiBuild();
   document.getElementById('defi-start-btn').style.display = 'none';
   document.getElementById('defi-restart-btn').style.display = 'none';
+  document.getElementById('defi-fixed-bar').style.display = 'none';
   document.getElementById('defi-g-left').style.display = 'block';
   document.getElementById('defi-g-right').style.display = 'block';
   document.getElementById('defi-streak-display').style.display = 'block';
@@ -554,6 +561,7 @@ function defiRender() {
   document.getElementById('defi-fiche-tag').textContent = card.fiche + ' · ' + card.theme;
   document.getElementById('defi-question').textContent = q;
   document.getElementById('defi-next-btn').style.display = 'none';
+  document.getElementById('defi-fixed-bar').style.display = 'none';
   document.getElementById('defi-feedback').style.display = 'none';
   defiAnswered = false;
   var gl = document.getElementById('defi-g-left');
@@ -616,6 +624,8 @@ function defiCheck(chosen, correct, card) {
     drawHermes(document.getElementById('defi-g-left'), 'happy');
     drawPhilo(document.getElementById('defi-g-right'), 'happy');
     document.getElementById('defi-next-btn').style.display = 'block';
+    document.getElementById('defi-restart-btn').style.display = 'none';
+    document.getElementById('defi-fixed-bar').style.display = 'block';
   } else {
     defiKo++;
     res.textContent = 'Raté ! Réponse : ' + correct + ' — Record : ' + defiRecord;
@@ -627,6 +637,7 @@ function defiCheck(chosen, correct, card) {
     drawPhilo(document.getElementById('defi-g-right'), 'sad');
     document.getElementById('defi-next-btn').style.display = 'none';
     document.getElementById('defi-restart-btn').style.display = 'block';
+    document.getElementById('defi-fixed-bar').style.display = 'block';
   }
 }
 
