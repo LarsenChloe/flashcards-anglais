@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Anglais — Chloé</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,6 +66,18 @@ button:active { transform: scale(0.98); }
 .toast { position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%); background: #9b1a2e; color: white; font-size: 13px; padding: 10px 20px; border-radius: 20px; opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 200; }
 .toast.show { opacity: 1; }
 </style>
+<link rel="apple-touch-icon" href="/flashcards-anglais/icon1.png">
+<link rel="icon" type="image/png" href="/flashcards-anglais/icon1.png">
+<meta name="apple-mobile-web-app-title" content="Anglais">
+<script>
+if ('serviceWorker' in navigator && location.hostname === 'larsenchloe.github.io') {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/flashcards-anglais/sw-chloe.js', {scope: '/flashcards-anglais/'})
+      .then(function(reg) { console.log('SW enregistré:', reg.scope); })
+      .catch(function(err) { console.log('SW erreur:', err); });
+  });
+}
+</script>
 </head>
 <body>
 
