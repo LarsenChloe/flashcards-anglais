@@ -1,5 +1,5 @@
 // Service Worker — Anglais Larsen
-var CACHE_NAME = 'anglais-larsen-v7';
+var CACHE_NAME = 'anglais-larsen-v8';
 
 var FILES_TO_CACHE = [
   '/flashcards-anglais/flashcards_larsen.html',

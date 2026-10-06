@@ -82,6 +82,9 @@ button:active { transform: scale(0.98); }
 .lc-ttl { flex:1; font-size:14px; color:#2a1a20; line-height:1.3; }
 .lc-st { font-size:12px; color:#9b1a2e; white-space:nowrap; }
 .lc-item.soon .lc-st { color:#999; }
+.lc-general { background:#fff0f3; border-color:#9b1a2e; margin-bottom:4px; }
+.lc-general .lc-num { color:#9b1a2e; }
+.lc-gsub { display:block; font-size:11px; color:#888; margin-top:2px; }
 .lc-bar { position:absolute; left:12px; right:12px; bottom:5px; height:3px; background:#eee; border-radius:2px; overflow:hidden; }
 .lc-bar span { display:block; height:100%; background:#c0394a; }
 .lc-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
@@ -5095,6 +5098,7 @@ ex: [
 
 <!-- PAGE EXERCICES -->
 <div id="page-ex" style="display:none">
+<div class="lc-top"><button onclick="showTab('lecons')">&#8592; Leçons</button><span style="font-size:11px;color:#9b1a2e;background:#fff0f3;border:1px solid #f0b8c4;border-radius:10px;padding:3px 10px">Révision générale</span></div>
 <h1>Exercices de grammaire</h1>
 <div class="controls">
   <select id="ex-cat" onchange="exBuild()">
@@ -5201,7 +5205,6 @@ ex: [
 </div>
 <nav class="bottom-nav">
   <button class="bnav-btn active" id="bn-flash" onclick="showTab('flash')">Vocabulaire</button>
-  <button class="bnav-btn" id="bn-ex" onclick="showTab('ex')">Grammaire</button>
   <button class="bnav-btn" id="bn-lecons" onclick="showTab('lecons')">Leçons</button>
   <button class="bnav-btn" id="bn-defi" onclick="showTab('defi')">Défi</button>
 </nav>
@@ -5222,8 +5225,7 @@ function showTab(tab) {
   document.getElementById('page-lecons').style.display = tab === 'lecons' ? 'block' : 'none';
   document.getElementById('page-defi').style.display = tab === 'defi' ? 'block' : 'none';
   document.getElementById('bn-flash').classList.toggle('active', tab === 'flash');
-  document.getElementById('bn-ex').classList.toggle('active', tab === 'ex');
-  document.getElementById('bn-lecons').classList.toggle('active', tab === 'lecons');
+  document.getElementById('bn-lecons').classList.toggle('active', tab === 'lecons' || tab === 'ex');
   document.getElementById('bn-defi').classList.toggle('active', tab === 'defi');
   if (tab !== 'defi') document.getElementById('defi-fixed-bar').style.display = 'none';
   if (tab !== 'lecons') document.getElementById('lc-fixed-bar').style.display = 'none';
@@ -5960,6 +5962,11 @@ function lcMatch(input, accepted) {
 function lcRenderList() {
   var box = document.getElementById('lc-list');
   box.innerHTML = '';
+  var gen = document.createElement('button');
+  gen.className = 'lc-item lc-general';
+  gen.onclick = function () { showTab('ex'); };
+  gen.innerHTML = '<span class="lc-num">&#9733;</span><span class="lc-ttl">Exercices de grammaire (révision générale)<span class="lc-gsub">Toutes catégories mélangées · QCM et textes à trou</span></span><span class="lc-st">' + GRAMMAR.length + '</span>';
+  box.appendChild(gen);
   var avail = 0, lastLevel = '';
   CURRICULUM.forEach(function (c, i) {
     if (c.l !== lastLevel) {
@@ -5988,7 +5995,7 @@ function lcRenderList() {
       (L ? '<span class="lc-bar"><span style="width:' + pct + '%"></span></span>' : '');
     box.appendChild(row);
   });
-  document.getElementById('lc-sub').textContent = avail + ' leçon' + (avail > 1 ? 's' : '') + ' disponible' + (avail > 1 ? 's' : '') + ' sur ' + CURRICULUM.length + ' · cours détaillé + 50 exercices chacune';
+  document.getElementById('lc-sub').textContent = avail + ' leçon' + (avail > 1 ? 's' : '') + ' disponible' + (avail > 1 ? 's' : '') + ' sur ' + CURRICULUM.length + ' · cours détaillé + 50 exercices chacune, plus une révision générale';
 }
 
 function lcOpen(id) {
